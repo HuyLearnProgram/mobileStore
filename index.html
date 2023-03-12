@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css"/>
+    <!--FONT FAMILY LINK-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <!--ICON LINK FROM ION ICON-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Mobile Phone Store</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header id="main-header">
+        <div class="heading">
+            <div class="container">
+
+                <div class="logo">
+                    <a href="/" title="Mobile Store Logo">
+                        <img src="./img/logo.png" title="Mobile Store Image"/>
+                    </a>
+                </div>
+
+                <div class="search-box">
+                    <form method="get">
+                        <div class="border">
+                            <input type="text" id="kwd" name="kwd" placeholder="Hôm nay bạn cần tìm gì?" autocomplete="off">
+                            <button type="submit" class="search">
+                                <ion-icon name="search-outline" class="icon-search"></ion-icon>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="order-tools">
+                    <div class="item check-order">
+                        <a id="btnCheckOrder" href="/">
+                            <span class="icon">
+                                <i class="ph ph-truck"></i>
+                            </span>
+                            <span class="text">Kiểm tra đơn hàng</span>
+                        </a>
+                    </div>
+                    <div class="item cart">
+                        <a href="/">
+                            <i class="ph ph-shopping-cart icon-cart"></i>
+                            <label>
+                                <i class="ph ph-caret-left"></i>
+                                <span id="cart-total">0</span>
+                            </label>
+                        </a>
+                    </div>
+
+                    <div class="item login-button">
+                        <a href="#login" class="login-box">
+                            <i class="ph-thin ph-user-circle"></i>
+                            <div class="login-content">
+                                <span class="title">Đăng nhập</span>
+                            </div>
+                        </a>
+                    </div>
+
+            </div>
+        </div>
+    </header> 
+
+    <section class="login" id="login">
+        <div class="login-modal">
+        <div class="login-container">
+            <header class="login-header">
+                <div class="login-header__cont">
+                    <div class="login-header__img">&nbsp;</div>
+                    <a href="#main-header" class="login-close-button">
+                        <i class="ph-bold ph-x"></i>
+                    </a>
+                </div>
+            </header>
+            <div class="login-content">
+                <div class="login-content__cont">
+                    <div class="login-content-header">
+                        <h4>Đăng nhập</h4>
+                    </div>
+                    <div class="toggle position-2-actived">
+                        <div class="toggle-container ">
+                        <div class="toggle-background">
+                            <div class="toggle-labels">
+                                <label class="position-1-label">Tài khoản khách</label>
+                                <label class="position-2-label">Tài khoản admin</label>
+                            </div>
+                            <div class="toggle-selection">
+                                <div class="toggle-selection-button"></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <form class="login-form" method="post">
+                        <div class="row">
+                            <div class="label">Tài khoản</div>
+                            <div class="input">
+                                <input type="text" name="userName" id="userName" placeholder="Tài khoản"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="label">Mật khẩu</div>
+                            <div class="input">
+                                <input type="password" name="password" id="password" placeholder="Mật khẩu"/>
+                            </div>
+                        </div>
+                        <div class="row adminInput">
+                            <div class="label">Admin ID</div>
+                            <div class="input">
+                                <input type="text" name="adminID" id="adminID" placeholder="AdminID"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-submit" type="submit">ĐĂNG NHẬP</button>
+                        </div>
+                        <div class="row">
+                            <a href="/" class="register">Đăng ký</a>
+                            <a href="/" class="forgotpass">Quên mật khẩu?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section-filter" id="section-filter">
+        <div class="container">
+            <div class="product-filters2">
+                <div class="left">
+                    <strong class="label">Lọc danh sách:</strong>
+                        <div class="facet">
+                            <label><a href="javascript:;">Danh mục <i class="ph-light ph-caret-down"></i></a></label>
+                            <div class="sub">
+                                <ul>
+                                        <li><a href="/dien-thoai-di-dong/iphone/iphone-11-series">iPhone 11 Series</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone/iphone-12-series">iPhone 12 series</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone/iphone-13-series">iPhone 13 Series</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone/iphone-14-series">iPhone 14 Series</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone/KM-iphon11-iphone12">Khuyến mại iphone 11 | iPhone 12</a></li>
+                                </ul>
+                            </div>
+                        </div>
+    
+    
+                        <div class="facet">
+                            <label>
+                                <a href="javascript:;">Giá <i class="ph-light ph-caret-down"></i></a>
+                            </label>
+                            <div class="sub">
+                                <ul>
+                                            <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22price%22%3a%2210t-12t%22%7d&amp;search=true">10 đến 12 triệu <i class="total">(1)</i></a></li>
+                                            <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22price%22%3a%2212t-15t%22%7d&amp;search=true">12 đến 15 triệu <i class="total">(2)</i></a></li>
+                                            <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22price%22%3a%2215t-20t%22%7d&amp;search=true">15 đến 20 triệu <i class="total">(5)</i></a></li>
+                                            <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22price%22%3a%2220t-100tr%22%7d&amp;search=true">20 đến 100 triệu <i class="total">(19)</i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="facet">
+                            <label>
+                                <a href="javascript:;">Bluetooth <i class="ph-light ph-caret-down"></i></a>
+                            </label>
+                            <div class="sub">
+                                <ul>
+                                            <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22bluetooth%22%3a%22A2DP%22%7d&amp;search=true">A2DP <i class="total">(13)</i></a></li>
+                                            <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22bluetooth%22%3a%22v5.0%22%7d&amp;search=true">v5.0 <i class="total">(12)</i></a></li>
+                                            <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22bluetooth%22%3a%22v5.3%22%7d&amp;search=true">v5.3 <i class="total">(12)</i></a></li>
+                                            <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22bluetooth%22%3a%22LE%22%7d&amp;search=true">LE <i class="total">(8)</i></a></li>
+                                            <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22bluetooth%22%3a%22Bluetooth+5.3%22%7d&amp;search=true">Bluetooth 5.3 <i class="total">(2)</i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="facet">
+                            <label>
+                                <a href="javascript:;">RAM <i class="ph-light ph-caret-down"></i></a>
+                            </label>
+                            <div class="sub">
+                                <ul>
+                                            <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22ram%22%3a%226+GB%22%7d&amp;search=true">6 GB <i class="total">(17)</i></a></li>
+                                            <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22ram%22%3a%224+GB%22%7d&amp;search=true">4 GB <i class="total">(10)</i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+    
+                <div class="right">
+                    <div class="facet">
+                        <label>Sắp xếp <i class="ph-light ph-caret-down"></i></label>
+                        <div class="sub">
+                            <ul>
+                                        <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22sort%22%3a%2212%22%7d&amp;search=true"><span class="fa fa-angle-right"></span> Mặc định</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22sort%22%3a%221%22%7d&amp;search=true"><span class="fa fa-angle-right"></span> Sản phẩm mới - cũ</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22sort%22%3a%222%22%7d&amp;search=true"><span class="fa fa-angle-right"></span> Giá thấp đến cao</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22sort%22%3a%223%22%7d&amp;search=true"><span class="fa fa-angle-right"></span> Giá cao đến thấp</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22sort%22%3a%224%22%7d&amp;search=true"><span class="fa fa-angle-right"></span> Mới cập nhật</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22sort%22%3a%225%22%7d&amp;search=true"><span class="fa fa-angle-right"></span> Sản phẩm cũ</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22sort%22%3a%226%22%7d&amp;search=true"><span class="fa fa-angle-right"></span> Xem nhiều hôm nay</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22sort%22%3a%227%22%7d&amp;search=true"><span class="fa fa-angle-right"></span> Xem nhiều tuần này</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22sort%22%3a%228%22%7d&amp;search=true"><span class="fa fa-angle-right"></span> Xem nhiều tháng này</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22sort%22%3a%2210%22%7d&amp;search=true"><span class="fa fa-angle-right"></span> Xem nhiều năm nay</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22sort%22%3a%229%22%7d&amp;search=true"><span class="fa fa-angle-right"></span> Xem nhiều nhất</a></li>
+                                        <li><a href="/dien-thoai-di-dong/iphone?filters=%7b%22sort%22%3a%2211%22%7d&amp;search=true"><span class="fa fa-angle-right"></span> Kết quả tìm kiếm</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-product">
+        <div class="container">
+            <div class="box-product-home box-home">
+                <div class="header">
+                    <h4><a href="/dien-thoai-di-dong">ĐIỆN THOẠI NỔI BẬT</a></h4>
+                </div>
+                <div class="col-content lts-product">
+
+                    <div class="item">
+
+                    <div class="img">
+                        <a href="/dien-thoai-di-dong/samsung-galaxy-s23-plus-8gb-256gb-chinh-hang" title="Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng">
+                            <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/02/s23-xang.png" alt="Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng" title="Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng">
+                        </a>
+                    </div>
+
+                        <span class="sales">
+                            <i class="ph-fill ph-lightning"></i> Giảm 2,000,000 ₫
+                        </span>
+
+                    <div class="info">
+                        <a href="/dien-thoai-di-dong/samsung-galaxy-s23-plus-8gb-256gb-chinh-hang" class="title" title="Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng">Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng</a>
+                        <span class="price">
+                                <strong>24,990,000 ₫</strong>
+                                            <strike>26,990,000 ₫</strike>
+                        </span>
+
+                    </div>
+
+
+                            <div class="note">
+                                <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                    <strong class="text-orange">VÀ 9 KM KHÁC</strong>
+                            </div>
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-s23-ultra-8gb-256gb-chinh-hang" title="Samsung Galaxy S23 Ultra 8GB/256GB - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/02/image-removebg-preview_638109032737367137.png" alt="Samsung Galaxy S23 Ultra 8GB/256GB - Chính hãng" title="Samsung Galaxy S23 Ultra 8GB/256GB - Chính hãng">
+                            </a>
+                        </div> 
+        
+                            <span class="sales">
+                                <i class="icon-flash2"></i> Giảm 8,000,000 ₫
+                            </span>
+        
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-s23-ultra-8gb-256gb-chinh-hang" class="title" title="Samsung Galaxy S23 Ultra 8GB/256GB - Chính hãng">Samsung Galaxy S23 Ultra 8GB/256GB - Chính hãng</a>
+                            <span class="price">
+                                    <strong>23,990,000 ₫</strong>
+                                                <strike>31,990,000 ₫</strike>
+                            </span>
+        
+                        </div>
+        
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-s23-8gb-256gb-chinh-hang" title="Samsung Galaxy S23 - 8GB/256GB - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/02/image-removebg-preview-2.png" alt="Samsung Galaxy S23 - 8GB/256GB - Chính hãng" title="Samsung Galaxy S23 - 8GB/256GB - Chính hãng">
+                            </a>
+                        </div>
+        
+        
+        
+                            <span class="sales">
+                                <i class="icon-flash2"></i> Giảm 1,000,000 ₫
+                            </span>
+        
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-s23-8gb-256gb-chinh-hang" class="title" title="Samsung Galaxy S23 - 8GB/256GB - Chính hãng">Samsung Galaxy S23 - 8GB/256GB - Chính hãng</a>
+                            <span class="price">
+                                    <strong>23,990,000 ₫</strong>
+                                                <strike>24,990,000 ₫</strike>
+                            </span>
+        
+                        </div>
+        
+        
+                                <div class="note">
+                                    <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                        <strong class="text-orange">VÀ 9 KM KHÁC</strong>
+                                </div>
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-a14-4g-4gb-128gb-chinh-hang" title="Samsung Galaxy A14 4G 4GB/128GB - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/01/13/a14-1.png" alt="Samsung Galaxy A14 4G 4GB/128GB - Chính hãng" title="Samsung Galaxy A14 4G 4GB/128GB - Chính hãng">
+                            </a>
+                        </div>
+
+                        <div class="cover">
+                        <div style="
+                        color: yellow;
+                        background: #00483D;
+                        margin: -95px 5px 0 52px;
+                        padding: 3px;
+                        border-radius: 6px;
+                        font-size: 11px;
+                        font-weight: 600;
+                        ">
+                        <span style="color:white">Tặng sạc 15W</span><br>
+                        <span style="color:yellow"></span>
+                        </div>
+        
+                        </div>  
+        
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-a14-4g-4gb-128gb-chinh-hang" class="title" title="Samsung Galaxy A14 4G 4GB/128GB - Chính hãng">Samsung Galaxy A14 4G 4GB/128GB - Chính hãng</a>
+                            <span class="price">
+                                    <strong>4,490,000 ₫</strong>
+                                        </span>
+                        </div>
+        
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 9 KM KHÁC</strong>
+                        </div>
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/xiaomi-12t-8gb-128gb-chinh-hang" title="Xiaomi 12T - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/01/image-removebg-preview-1.png" alt="Xiaomi 12T - Chính hãng" title="Xiaomi 12T - Chính hãng">
+                            </a>
+                        </div>
+        
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/xiaomi-12t-8gb-128gb-chinh-hang" class="title" title="Xiaomi 12T - Chính hãng">Xiaomi 12T - Chính hãng</a>
+                            <span class="price">
+                                    <strong>10,790,000 ₫</strong>
+                                                <strike>12,490,000 ₫</strike>
+                            </span>
+        
+                        </div>
+        
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 9 KM KHÁC</strong>
+                        </div>
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/dien-thoai-di-dong-tcl-305-cruze-lite-chinh-hang" title="Điện thoại di dộng TCL 305 - CRUZE LITE - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/09/13/image-removebg-preview-25.png" alt="Điện thoại di dộng TCL 305 - CRUZE LITE - Chính hãng" title="Điện thoại di dộng TCL 305 - CRUZE LITE - Chính hãng">
+                            </a>
+                        </div>
+        
+                                <div class="sticker sticker-left">
+                                    <span><img src="./img/bao-hanh-18t.png" title="Bảo hành 18 tháng"></span>
+                            </div>
+        
+        
+                            <span class="sales">
+                                <i class="icon-flash2"></i> Giảm 500,000 ₫
+                            </span>
+        
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/dien-thoai-di-dong-tcl-305-cruze-lite-chinh-hang" class="title" title="Điện thoại di dộng TCL 305 - CRUZE LITE - Chính hãng">Điện thoại di dộng TCL 305 - CRUZE LITE - Chính hãng</a>
+                            <span class="price">
+                                    <strong>1,990,000 ₫</strong>
+                                                <strike>2,490,000 ₫</strike>
+                            </span>
+        
+                        </div>
+        
+        
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm thêm tới 800.000đ khi mở thẻ tín dụng TPBank EVO">Giảm thêm tới 800.000đ khi mở thẻ t...</label>
+                                <strong class="text-orange">VÀ 6 KM KHÁC</strong>
+                        </div>
+                    </div>
+                    <div class="item">
+                    <div class="img">
+                        <a href="/dien-thoai-di-dong/tecno-pova-4-pro-8gb-128gb-chinh-hang" title="TECNO POVA 4 PRO 8GB/128GB - Chính hãng">
+                            <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/12/10/image-removebg-preview-2022-12-10t104204-819.png" alt="TECNO POVA 4 PRO 8GB/128GB - Chính hãng" title="TECNO POVA 4 PRO 8GB/128GB - Chính hãng">
+                        </a>
+                    </div>
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 340,000 ₫
+                        </span>
+
+                    <div class="info">
+                        <a href="/dien-thoai-di-dong/tecno-pova-4-pro-8gb-128gb-chinh-hang" class="title" title="TECNO POVA 4 PRO 8GB/128GB - Chính hãng">TECNO POVA 4 PRO 8GB/128GB - Chính hãng</a>
+                        <span class="price">
+                                <strong>4,650,000 ₫</strong>
+                                            <strike>4,990,000 ₫</strike>
+                        </span>
+
+                    </div>
+                            <div class="note">
+                                <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                    <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                            </div>
+                    </div>
+                    <div class="item">
+
+                    <div class="img">
+                        <a href="/dien-thoai-di-dong/realme-c33-4gb-64gb-chinh-hang" title="Realme C33 4GB/64GB - Chính hãng">
+                            <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/10/18/image-removebg-preview-53.png" alt="Realme C33 4GB/64GB - Chính hãng" title="Realme C33 4GB/64GB - Chính hãng">
+                        </a>
+                    </div>
+
+                            <div class="sticker sticker-left">
+                                <span><img src="./img/bao-hanh-18t.png" title="Bảo hành 12 tháng"></span>
+                        </div>
+
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 800,000 ₫
+                        </span>
+
+                    <div class="info">
+                        <a href="/dien-thoai-di-dong/realme-c33-4gb-64gb-chinh-hang" class="title" title="Realme C33 4GB/64GB - Chính hãng">Realme C33 4GB/64GB - Chính hãng</a>
+                        <span class="price">
+                                <strong>3,190,000 ₫</strong>
+                                            <strike>3,990,000 ₫</strike>
+                        </span>
+
+                    </div>
+                            <div class="note">
+                                <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                    <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                            </div>
+                    </div>
+                    <div class="item">
+
+                    <div class="img">
+                        <a href="/dien-thoai-di-dong/realme-c30s-2gb-32gb-chinh-hang" title="Realme C30s 2GB/32GB - Chính hãng ">
+                            <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/01/c30s.png" alt="Realme C30s 2GB/32GB - Chính hãng " title="Realme C30s 2GB/32GB - Chính hãng ">
+                        </a>
+                    </div>
+
+                            <div class="sticker sticker-left">
+                                <span><img src="./img/bao-hanh-18t.png" title="Bảo hành 12 tháng"></span>
+                        </div>
+
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 540,000 ₫
+                        </span>
+
+                    <div class="info">
+                        <a href="/dien-thoai-di-dong/realme-c30s-2gb-32gb-chinh-hang" class="title" title="Realme C30s 2GB/32GB - Chính hãng ">Realme C30s 2GB/32GB - Chính hãng </a>
+                        <span class="price">
+                                <strong>1,950,000 ₫</strong>
+                                            <strike>2,490,000 ₫</strike>
+                        </span>
+
+                    </div>
+
+                            <div class="note">
+                                <span class="bag">KM</span> <label title="Giảm thêm tới 800.000đ khi mở thẻ tín dụng TPBank EVO">Giảm thêm tới 800.000đ khi mở thẻ t...</label>
+                                    <strong class="text-orange">VÀ 6 KM KHÁC</strong>
+                            </div>
+
+                    </div>
+                    <div class="item">
+
+                    <div class="img">
+                        <a href="/dien-thoai-di-dong/vivo-t1x-4g-64g-chinh-hang" title="Vivo T1X 4GB/64GB- Chính hãng">
+                            <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/07/11/image-removebg-preview-31.png" alt="Vivo T1X 4GB/64GB- Chính hãng" title="Vivo T1X 4GB/64GB- Chính hãng">
+                        </a>
+                    </div>
+
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 540,000 ₫
+                        </span>
+
+                    <div class="info">
+                        <a href="/dien-thoai-di-dong/vivo-t1x-4g-64g-chinh-hang" class="title" title="Vivo T1X 4GB/64GB- Chính hãng">Vivo T1X 4GB/64GB- Chính hãng</a>
+                        <span class="price">
+                                <strong>3,950,000 ₫</strong>
+                                            <strike>4,490,000 ₫</strike>
+                        </span>
+
+                    </div>
+
+                            <div class="note">
+                                <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                    <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                            </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/nokia-c21-plus-2gb-64gb-chinh-hang" title="Nokia C21 Plus 2GB/64GB - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/05/07/image-removebg-preview_637875529202208799.png" alt="Nokia C21 Plus 2GB/64GB - Chính hãng" title="Nokia C21 Plus 2GB/64GB - Chính hãng">
+                            </a>
+                        </div>
+
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 1,040,000 ₫
+                        </span>
+
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/nokia-c21-plus-2gb-64gb-chinh-hang" class="title" title="Nokia C21 Plus 2GB/64GB - Chính hãng">Nokia C21 Plus 2GB/64GB - Chính hãng</a>
+                            <span class="price">
+                                    <strong>1,850,000 ₫</strong>
+                                                <strike>2,890,000 ₫</strike>
+                            </span>
+
+                        </div>
+
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm thêm tới 800.000đ khi mở thẻ tín dụng TPBank EVO">Giảm thêm tới 800.000đ khi mở thẻ t...</label>
+                                <strong class="text-orange">VÀ 6 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/reno8-chinh-hang" title="Reno8 4G - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/08/02/combo-product-reno8-4g-black.png" alt="Reno8 4G - Chính hãng" title="Reno8 4G - Chính hãng">
+                            </a>
+                        </div>
+
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/reno8-chinh-hang" class="title" title="Reno8 4G - Chính hãng">Reno8 4G - Chính hãng</a>
+                            <span class="price">
+                                    <strong>7,490,000 ₫</strong>
+                                        </span>
+
+                        </div>
+
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/vivo-v25e-4g-8gb-128gb-chinh-hang" title="Vivo V25e 4G 8GB/128GB - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/09/23/image-removebg-preview-53.png" alt="Vivo V25e 4G 8GB/128GB - Chính hãng" title="Vivo V25e 4G 8GB/128GB - Chính hãng">
+                            </a>
+                        </div>
+
+                            <span class="sales">
+                                <i class="icon-flash2"></i> Giảm 1,000,000 ₫
+                            </span>
+
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/vivo-v25e-4g-8gb-128gb-chinh-hang" class="title" title="Vivo V25e 4G 8GB/128GB - Chính hãng">Vivo V25e 4G 8GB/128GB - Chính hãng</a>
+                            <span class="price">
+                                    <strong>7,490,000 ₫</strong>
+                                                <strike>8,490,000 ₫</strike>
+                            </span>
+
+                        </div>
+
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/xiaomi-12-lite-chinh-hang" title="Xiaomi 12 Lite 5G - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/09/08/thumb-xiaomi-12.jpg" alt="Xiaomi 12 Lite 5G - Chính hãng" title="Xiaomi 12 Lite 5G - Chính hãng">
+                            </a>
+                        </div>
+
+                            <span class="sales">
+                                <i class="icon-flash2"></i> Giảm 1,400,000 ₫
+                            </span>
+
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/xiaomi-12-lite-chinh-hang" class="title" title="Xiaomi 12 Lite 5G - Chính hãng">Xiaomi 12 Lite 5G - Chính hãng</a>
+                            <span class="price">
+                                    <strong>8,590,000 ₫</strong>
+                                                <strike>9,990,000 ₫</strike>
+                            </span>
+
+                        </div>
+
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/reno8-z-5g-chinh-hang" title="Reno8 Z 5G - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/08/02/combo-product-reno8-z-gold.png" alt="Reno8 Z 5G - Chính hãng" title="Reno8 Z 5G - Chính hãng">
+                            </a>
+                        </div>
+
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 1,800,000 ₫
+                        </span>
+
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/reno8-z-5g-chinh-hang" class="title" title="Reno8 Z 5G - Chính hãng">Reno8 Z 5G - Chính hãng</a>
+                            <span class="price">
+                                    <strong>7,990,000 ₫</strong>
+                                                <strike>9,790,000 ₫</strike>
+                            </span>
+
+                        </div>
+
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/nokia-g11-3gb-32gb-plus-chinh-hang" title="Nokia G11 Plus 3GB/32GB - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/08/04/image-removebg-preview-2_637952077804801502.png" alt="Nokia G11 Plus 3GB/32GB - Chính hãng" title="Nokia G11 Plus 3GB/32GB - Chính hãng">
+                            </a>
+                        </div>
+
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 1,110,000 ₫
+                        </span>
+
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/nokia-g11-3gb-32gb-plus-chinh-hang" class="title" title="Nokia G11 Plus 3GB/32GB - Chính hãng">Nokia G11 Plus 3GB/32GB - Chính hãng</a>
+                            <span class="price">
+                                    <strong>2,280,000 ₫</strong>
+                                                <strike>3,390,000 ₫</strike>
+                            </span>
+
+                        </div>
+
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm thêm tới 800.000đ khi mở thẻ tín dụng TPBank EVO">Giảm thêm tới 800.000đ khi mở thẻ t...</label>
+                                <strong class="text-orange">VÀ 6 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-z-fold4-2022" title="Samsung Galaxy Z Fold4 - 256GB - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/08/10/z-flip-4.jpg" alt="Samsung Galaxy Z Fold4 - 256GB - Chính hãng" title="Samsung Galaxy Z Fold4 - 256GB - Chính hãng">
+                            </a>
+                        </div>
+
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 8,200,000 ₫
+                        </span>
+
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-z-fold4-2022" class="title" title="Samsung Galaxy Z Fold4 - 256GB - Chính hãng">Samsung Galaxy Z Fold4 - 256GB - Chính hãng</a>
+                            <span class="price">
+                                    <strong>32,790,000 ₫</strong>
+                                                <strike>40,990,000 ₫</strike>
+                            </span>
+
+                        </div>
+
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 10 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-z-flip4-2022" title="Samsung Galaxy Z Flip4 -128GB - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/08/10/z-fold-4-1.jpg" alt="Samsung Galaxy Z Flip4 -128GB - Chính hãng" title="Samsung Galaxy Z Flip4 -128GB - Chính hãng">
+                            </a>
+                        </div>
+
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 6,100,000 ₫
+                        </span>
+
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-z-flip4-2022" class="title" title="Samsung Galaxy Z Flip4 -128GB - Chính hãng">Samsung Galaxy Z Flip4 -128GB - Chính hãng</a>
+                            <span class="price">
+                                    <strong>17,890,000 ₫</strong>
+                                                <strike>23,990,000 ₫</strike>
+                            </span>
+
+                        </div>
+
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 10 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-a23-4gb-128gb-chinh-hang" title="Samsung Galaxy A23 4GB/128GB - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/26/a23.png" alt="Samsung Galaxy A23 4GB/128GB - Chính hãng" title="Samsung Galaxy A23 4GB/128GB - Chính hãng">
+                            </a>
+                        </div>
+
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 1,100,000 ₫
+                        </span>
+
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-a23-4gb-128gb-chinh-hang" class="title" title="Samsung Galaxy A23 4GB/128GB - Chính hãng">Samsung Galaxy A23 4GB/128GB - Chính hãng</a>
+                            <span class="price">
+                                    <strong>4,590,000 ₫</strong>
+                                                <strike>5,690,000 ₫</strike>
+                            </span>
+
+                        </div>
+
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-a73-chinh-hang" title="Samsung Galaxy A73 5G - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/10/image-removebg-preview.png" alt="Samsung Galaxy A73 5G - Chính hãng" title="Samsung Galaxy A73 5G - Chính hãng">
+                            </a>
+                        </div>
+
+                        <div class="sticker sticker-left">
+                                <span><img src="./img/bao-hanh-18t.png" title="Bảo hành 12 tháng"></span>
+                        </div>
+
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 2,340,000 ₫
+                        </span>
+
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-a73-chinh-hang" class="title" title="Samsung Galaxy A73 5G - Chính hãng">Samsung Galaxy A73 5G - Chính hãng</a>
+                            <span class="price">
+                                    <strong>9,650,000 ₫</strong>
+                                                <strike>11,990,000 ₫</strike>
+                            </span>
+
+                        </div>
+
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-a13-4gb-128gb-chinh-hang" title="Samsung Galaxy A13 4GB/128GB - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/04/08/image-removebg-preview-2.png" alt="Samsung Galaxy A13 4GB/128GB - Chính hãng" title="Samsung Galaxy A13 4GB/128GB - Chính hãng">
+                            </a>
+                        </div>
+
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 900,000 ₫
+                        </span>
+
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/samsung-galaxy-a13-4gb-128gb-chinh-hang" class="title" title="Samsung Galaxy A13 4GB/128GB - Chính hãng">Samsung Galaxy A13 4GB/128GB - Chính hãng</a>
+                            <span class="price">
+                                    <strong>3,790,000 ₫</strong>
+                                                <strike>4,690,000 ₫</strike>
+                            </span>
+
+                        </div>
+
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/xiaomi-redmi-10c-4gb-128gb-chinh-hang" title="Xiaomi Redmi 10C 4GB/128GB chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/03/21/redmi-10c-9.png" alt="Xiaomi Redmi 10C 4GB/128GB chính hãng" title="Xiaomi Redmi 10C 4GB/128GB chính hãng">
+                            </a>
+                        </div>
+
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 800,000 ₫
+                        </span>
+
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/xiaomi-redmi-10c-4gb-128gb-chinh-hang" class="title" title="Xiaomi Redmi 10C 4GB/128GB chính hãng">Xiaomi Redmi 10C 4GB/128GB chính hãng</a>
+                            <span class="price">
+                                    <strong>3,090,000 ₫</strong>
+                                                <strike>3,890,000 ₫</strike>
+                            </span>
+
+                        </div>
+
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/-redmi-note-11-pro-chinh-hang" title="Redmi Note 11 Pro - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/02/17/note-11pro-7.png" alt="Redmi Note 11 Pro - Chính hãng" title="Redmi Note 11 Pro - Chính hãng">
+                            </a>
+                        </div>
+
+                            <div class="sticker sticker-left">
+                                <span><img src="./img/bao-hanh-18t.png" title="Sản phẩm HOT"></span>
+                        </div>
+
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 1,200,000 ₫
+                        </span>
+
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/-redmi-note-11-pro-chinh-hang" class="title" title="Redmi Note 11 Pro - Chính hãng">Redmi Note 11 Pro - Chính hãng</a>
+                            <span class="price">
+                                    <strong>6,290,000 ₫</strong>
+                                                <strike>7,490,000 ₫</strike>
+                            </span>
+
+                        </div>
+
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                            <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/-redmi-note-11-4gb-64gb-chinh-hang" title="Redmi Note 11 - 4GB/64GB- chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/01/27/thumb.jpg" alt="Redmi Note 11 - 4GB/64GB- chính hãng" title="Redmi Note 11 - 4GB/64GB- chính hãng">
+                            </a>
+                        </div>
+                            <span class="sales">
+                                <i class="icon-flash2"></i> Giảm 800,000 ₫
+                            </span>
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/-redmi-note-11-4gb-64gb-chinh-hang" class="title" title="Redmi Note 11 - 4GB/64GB- chính hãng">Redmi Note 11 - 4GB/64GB- chính hãng</a>
+                            <span class="price">
+                                    <strong>3,890,000 ₫</strong>
+                                                <strike>4,690,000 ₫</strike>
+                            </span>
+                        
+                        </div>
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+                    
+                        <div class="img">
+                            <a href="/dien-thoai-di-dong/xiaomi-12-chinh-hang" title="Xiaomi 12 - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2022/03/17/image-removebg-preview-5.png" alt="Xiaomi 12 - Chính hãng" title="Xiaomi 12 - Chính hãng">
+                            </a>
+                        </div>
+
+                        <span class="sales">
+                            <i class="icon-flash2"></i> Giảm 7,000,000 ₫
+                        </span>
+                    
+                        <div class="info">
+                            <a href="/dien-thoai-di-dong/xiaomi-12-chinh-hang" class="title" title="Xiaomi 12 - Chính hãng">Xiaomi 12 - Chính hãng</a>
+                            <span class="price">
+                                    <strong>12,990,000 ₫</strong>
+                                                <strike>19,990,000 ₫</strike>
+                            </span>
+                        
+                        </div>
+                        
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                        </div>
+                    </div>                 
+                </div>
+            </div>
+            <div class="more-product" id="page-pager">
+				<a href="javascript:getPage(2)">Xem thêm 160 sản phẩm</a>
+			</div>
+        </div>
+    </section>
+
+    <section class="section-features">
+        <div class="container">
+            <div class="corevalue">
+                    <div class="item">
+                        <span class="icon">
+                            <i class="ph ph-seal-check"></i>
+                        </span>
+                        <div class="text">
+                            <span>Sản phẩm</span>
+                            <strong>CHÍNH HÃNG</strong>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="icon">
+                            <i class="ph ph-globe"></i>
+                        </span>
+                        <div class="text">
+                            <span>Miễn phí vận chuyển</span>
+                            <strong>TOÀN QUỐC</strong>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="icon">
+                            <i class="ph ph-headset"></i>
+                        </span>
+                        <div class="text">
+                            <span>Hotline hỗ trợ</span>
+                            <strong>1900.2091</strong>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="icon">
+                            <i class="ph ph-arrows-clockwise"></i>
+                        </span>
+                        <div class="text">
+                            <span>Thủ tục đổi trả</span>
+                            <strong>DỄ DÀNG</strong>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+
+
+            <div class="bg">
+                <div class="col-content">
+                        <div class="link-content">
+                        <h4><a>Hỗ Trợ - Dịch Vụ</a></h4>
+                        <ul>
+                            <li><a href="/mua-hang-tra-gop">Mua hàng trả góp</a></li>
+                            <li><a href="/huong-dan-dat-hang">Hướng dẫn đặt hàng và thanh toán</a></li>
+                            <li><a href="/order/check">Tra cứu đơn hàng</a></li>
+                            <li><a href="/chinh-sach-bao-hanh">Chính sách bảo hành</a></li>
+                            <li><a href="/dat-hang/bao-hanh-mo-rong">Phạm vi, điều khoản gói bảo hành mở rộng</a></li>
+                            <li><a href="/chinh-sach-bao-mat">Chính sách bảo mật</a></li>
+                            <li><a href="/chinh-sach-giai-quyet-khieu-nai">Chính sách giải quyết khiếu nại</a></li>
+                            <li><a href="/dieu-khoan-mua-ban-hang-hoa">Điều khoản mua bán hàng hóa</a></li>
+                            <li><a href="/cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                        <div class="link-content">
+                        <h4><a>Thông Tin Liên Hệ</a></h4>
+                        <ul>
+                            <li><a href="/mua-hang-online">Bán hàng Online</a></li>
+                            <li><a>Chăm sóc Khách Hàng</a></li>
+                            <li><a>Hỗ Trợ Kỹ thuật</a></li>
+                            <li><a>Hỗ trợ Bảo hành &amp; Sửa chữa</a></li>
+                            <li><a>Liên hệ khối văn phòng</a></li>
+                        </ul>
+                    </div>
+                        <div class="link-content">
+                        <h4><a href="/he-thong-cua-hang">Hệ thống 124 siêu thị trên toàn quốc</a></h4>
+                        <ul>
+                            <li><a href="/he-thong-cua-hang">Danh sách 124 siêu thị trên toàn quốc</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Tổng đài</h4>
+                        <a class="hotline" href="tel:1900.2091">1900.2091</a>
+                    </div>
+
+                    <div>
+                        <h4>Thanh toán miễn phí</h4>
+                        <ul class="list-logo">
+                            <li>
+                                <img src="./img/logo-visa.png">
+                                <img src="./img/logo-master.png">
+                            </li>
+                            <li>
+                                <img src="./img/logo-jcb.png">
+                                <img src="./img/logo-samsungpay.png">
+                            </li>
+                            <li>
+                                <img src="./img/logo-atm.png">
+                                <img src="./img/logo-vnpay.png">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Hình thức vận chuyển</h4>
+                        <ul class="list-logo">
+                            <li>
+                                <img src="./img/nhattin.jpg">
+                                <img src="./img/vnpost.jpg">
+                            </li>
+                        </ul>
+                        <div class="mg-top20">
+                            <a href="http://online.gov.vn/Home/WebDetails/28738" target="_blank"><img src="./img/logo-bct.png"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <p>© 2023. CÔNG TY CỔ PHẦN XÂY DỰNG VÀ ĐẦU TƯ THƯƠNG MẠI HOÀNG HÀ. MST:  0106713191. (Đăng ký lần đầu: Ngày 15 tháng 12 năm 2014, Đăng ký thay đổi ngày 24/11/2022)</p>
+                    <p><strong>Trang web không phải nguyên mẫu và được tạo dựa theo website</strong></p>
+                    <p>Địa chỉ web: <a href="https://hoanghamobile.com/dien-thoai-di-dong">hoanghamobile.com</a> </p>
+                    
+                </div>
+            </div>
+
+            <!-- <div id="navSocial">
+                <div class="social">
+                    <ul>
+                            <li><a href="https://www.facebook.com/hoanghamobilecom" title="Facebook Hoàng Hà Mobile" target="_blank" class="blue"><span><i class="icon-facebook"></i></span></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCJm_GdFJzT8h1odq1oMu_7Q?sub_confirmation=1" title="Youtube Hoàng Hà Mobile Channel" target="_blank" class="red"><span><i class="icon-youtube"></i></span></a></li>
+                            <li><a href="https://www.instagram.com/hoanghamobile/?hl=vi" title="Hoàng Hà Mobile Instagram" target="_blank" class="rainbow"><span><i class="icon-instagram"></i></span></a></li>
+                            <li><a href="https://www.tiktok.com/@hoanghaangels?" title="Tiktok" target="_blank" class="black"><span><i class="icon-tiktok"></i></span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="backtoTop" style="display: block;">
+                <a id="top" href="javascript:;">
+                    <i class="icon-left"></i>
+                </a>
+            </div> -->
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+.section-filter{
+    .product-filters2{
+        position: relative;
+        display: flex;
+        background: $color-white 0% 0% no-repeat padding-box;
+        box-shadow: 0 3px 6px #00000029;
+        border-radius: 1.4rem;
+        margin: 2rem 0;
+        font-size: 1.3rem;
+        .left{
+            display: flex;
+            justify-items: right;
+            justify-content: right;
+            width: 10rem;
+            flex-basis: auto;
+            flex-shrink: 1;
+            flex-grow: 2;
+        }
+        .label{
+            display: inline-block;
+            color: $primary-color;
+            padding: 1.5rem 2rem;
+        }
+        .facet{
+            display: block;
+            padding: 1.5rem 1rem;
+            margin-right: 2rem;
+            label{
+                display: flex;
+                align-items: center;
+                & a {
+                    color: #00483d;
+                }
+            }
+            &:hover label a, &:hover label span {
+                color: #fd475a;
+            }
+            .sub{
+                display: none;
+                position: absolute;
+                width: 100%;
+                z-index: 123;
+                left: 0;
+                top: 4.5rem;
+                padding-top: 1rem;
+                ul{
+                    background: $color-white;
+                    box-shadow: 0 3px 6px #00000029;
+                    border-radius: 1.4rem;
+                    margin: 0;
+                    display: grid;
+                    grid-template-columns: auto auto auto auto auto;
+                    padding: .5rem 1rem;
+                    grid-column-gap: 1rem;
+                    li{
+                        list-style: none;
+                        padding: .5rem;
+                        display: flex;
+                        &:hover a{
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+            &:hover .sub{
+                display: block;
+            }
+
+        }
+        .right{
+            display: flex;
+            justify-items: right;
+            justify-content: right;
+            width: 100px;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+    }
+}

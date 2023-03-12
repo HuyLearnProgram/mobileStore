@@ -1,0 +1,27 @@
+.header{
+    background: #009981;
+    margin-bottom: 2rem;
+    display: inline-block;
+    height: 3rem;
+    overflow: hidden;
+    &::after{
+        content: " ";
+        border-top: 30px solid #00483d;
+        border-left: 30px solid #009981;
+        margin-left: 40px;
+    }
+    h4{
+        padding: 5px 60px 6px 35px;
+        margin: 0 0 0 60px;
+        background: #00483d;
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: 1.3;
+        & a,& a:link,a:visited{
+            color: $color-white;
+        }
+    }
+    &:hover h4 a{
+        color: $primary-color;
+    }
+}

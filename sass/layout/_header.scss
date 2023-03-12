@@ -1,0 +1,156 @@
+header {
+    .heading{
+        .container{
+            padding: 2rem 0;
+            display: flex;
+            align-items: center;
+        }
+        .logo{
+            width: 25.6rem;
+            padding-right: 1rem;
+            img{
+                width: 100%;
+            }
+        }
+        .search-box{
+            flex-basis: 100%;
+            padding: 2px 0px 0px 20px;
+            vertical-align: top;
+            position: relative;
+            form{
+                display: block;
+                margin-top: 0rem;
+            }
+            .border{
+                background-color: $color-white;
+                border-radius: 15px;
+                padding: 5px 10px;
+                box-shadow: 0 4px 6px #ccc;
+                position: relative;
+
+                input{
+                    border: none;
+                    outline: none;
+                    padding: 7px 0;
+                    width: 100%;
+                    font-weight: bold;
+                }
+                button{
+                    width: 4.2rem;
+                    height: 4.2rem;
+                    position: absolute;
+                    right: 4px;
+                    top: -5px;
+                    background: $primary-color-dark;
+                    background-image: linear-gradient($primary-color,$primary-color-dark);
+                    border: none;  
+                    border-radius: 1.7rem;
+                    box-shadow: $default-box-shadow;
+                    font-size: 2.4rem;
+                    color: $color-white;
+                    cursor: pointer;
+                }
+            }
+        }
+        .order-tools{
+            display: flex;
+            width: 30rem;
+            vertical-align: top;
+            padding-left: 2.5rem;
+            align-items: center;
+            .item{
+                float: left;
+            }
+            .check-order{
+                margin-right: 2.5rem;
+                a{
+                    display: block;
+                    background: $primary-color-dark;
+                    border-radius: 1rem;
+                    padding: 4px 8px;
+                    box-shadow: $default-box-shadow;
+                    color: $color-white;
+                    border: none;
+                    font-size: 1.2rem;
+                    width: 11rem;
+                    position: relative;
+                }
+                .icon{
+                    font-size: 30px;
+                    position: absolute;
+                    left: 8px;
+                }
+                .text{
+                    text-align: left;
+                    display: block;
+                    margin-left: 40px;
+                }
+            }
+            .cart {
+                a,a:link,a:visited{
+                    font-size: 4.1rem;
+                    color: $primary-color-dark;
+                    display: flex;
+                    margin-top: 0.5rem;
+                }
+            }
+            label {
+                display: flex;
+                justify-items: right;
+                justify-content: right;
+                i{
+                color: #ff6801;
+                font-size: 1.4rem;
+                margin-top: 1.6rem;
+                }
+                span{
+                    text-align: center;
+                    background: #ff6801;
+                    margin-top: 1rem;
+                    margin-left: -1px;
+                    font-size: 12px;
+                    display: block;
+                    border-radius: 4px;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    padding: 6px;
+                    color: #fff;
+                    line-height: 12px;
+                    margin-left: -0.8rem;
+                }
+            }
+            .login-button{
+                color: $primary-color-dark;
+                font-weight: 500;
+                width: 7rem;
+                background: hsla(0,0%,100%,.2);
+                
+                // padding: 0rem 0.8rem 0.6rem 1.2rem;
+                margin-top: 0.5rem;
+                cursor: pointer;
+
+                &-box{
+                    font-size: 3rem;
+                }
+                &-content{
+                    margin-top: -1rem;
+                }
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-size: 1.1rem;
+                    i{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container{
+    min-width: 120rem;
+    width: 120rem;
+    margin: 0 auto;
+}

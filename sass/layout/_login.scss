@@ -1,0 +1,199 @@
+.login{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:rgba(0,0,0,0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    -webkit-transition:all .3s;
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+    .login-modal{
+        border: 1px solid #dadada;
+        background-color: $color-white;
+        border-radius: 0.5rem;
+        max-width: 40m;
+        width: 40rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 1000;
+        .login-container{
+            padding: 2rem 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .login-header{
+                position: relative;
+                margin-top: 1rem;
+                padding-bottom: 3rem;
+                border-bottom: 1px solid #dadada;
+                &__cont{
+                    display: flex;
+                    justify-content: center;
+                }
+                &__img{
+                    width: 22rem;
+                    height: 2.75rem;
+                    background-image: url("../../img/logo.png");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: top;
+                }
+                .login-close-button{
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    position: absolute;
+                    top: -2.5rem;
+                    right: 0.5rem;
+                    font-size: 2.4rem;
+                }
+            }
+            .login-content{
+                &__cont{
+                    padding: 1.5rem 4rem;
+                }
+                &-header{
+                    font-size: 3rem;
+                    background-image: linear-gradient(to right, $primary-color,$primary-color-dark);
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+            }
+            .toggle{
+                padding-bottom: 1.5rem;
+                border-bottom: 1px solid #dadada;
+
+                &-background{
+                    background-color: #f4f4f4;
+                    border-radius: 3rem;
+                    padding: 4px;
+                    position: relative;
+                }
+                &-labels {
+                    z-index: 100;
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    min-height: 2.5rem;
+                    font-size: 1.4rem;
+                    letter-spacing: 0.5px;
+                    label{
+                        flex-grow: 1;
+                        text-align: center;
+                        min-width: 50%;
+                        margin: 0;
+                        padding: 0.5rem 0;
+                        color: #75757a;
+                        font-weight: 400;
+                        cursor: pointer
+                    }
+                }
+                &-selection{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 4px;
+                    &-button{
+                        position: relative;
+                        width: 50%;
+                        height: 100%;
+                        border: 2px solid #fff;
+                        border-radius: 3rem;
+                        background-color: $primary-color-light;
+                        box-shadow: 0 0 2px #bbb;
+                        transition: left .5s,right .5s;
+                    }
+                }
+                
+            }
+            .login-form{
+                display: flex;
+                flex-direction: column;
+                row-gap: .2rem;
+                margin-top: 2rem;
+                .label{
+                    font-size: 1.6rem;
+                    color: $primary-color;
+                    font-weight: 800;
+                }
+                input{
+                    font-size: 1.2em;
+                    color: #002f5f;
+                    border-radius: 0.25em;
+                    background-color: #fff;
+                    background-image: none;
+                    height: 3em;
+                    width: 100%;
+                    border: 1px solid #bbb;
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                    padding: 0.75rem 0.875rem;
+                    margin-bottom: 1em;
+                    &:focus{
+                        outline: 1px solid #bbb;
+                    }
+                }
+                button{
+                    font-size: 1.2em;
+                    font-weight: 700;
+                    color: #fff;
+                    margin-bottom: 1rem;
+                    margin-top: 0.5rem;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    border-radius: 0;
+                    background-color: $primary-color-dark;
+                    width: 100%;
+                    min-height: 3em;
+                    border: none;
+                    cursor: pointer;
+                }
+                &>div:last-child{
+                    display: flex;
+                    column-gap: .5rem;
+                    margin-left: auto;
+                    font-size: 1.2rem;
+                    & a{
+                        &,&:link,&:visited{
+                            color: rgb(13, 92, 182);
+                        }
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+.position-1-actived ~ .login-form .adminInput{
+    display: none;
+    visibility: hidden;
+}
+.position-1-actived{
+    .toggle-selection-button{
+        right: 50%;
+        left: 0;
+    }
+}
+.position-2-actived{
+    .toggle-selection-button{
+        right: 0;
+        left: 50%;
+    }
+}
