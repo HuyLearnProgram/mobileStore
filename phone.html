@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css"/>
+    <!--FONT FAMILY LINK-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <!--ICON LINK FROM ION ICON-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Mobile Phone Store</title>
+    <script defer src="./src/phone.js"></script>
+</head>
+<body>
+    <header id="main-header">
+        <div class="heading">
+            <div class="container">
+
+                <div class="logo">
+                    <a href="/" title="Mobile Store Logo">
+                        <img src="./img/logo.png" title="Mobile Store Image"/>
+                    </a>
+                </div>
+
+                <div class="search-box">
+                    <form method="get">
+                        <div class="border">
+                            <input type="text" id="kwd" name="kwd" placeholder="Hôm nay bạn cần tìm gì?" autocomplete="off">
+                            <button type="submit" class="search">
+                                <ion-icon name="search-outline" class="icon-search"></ion-icon>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="order-tools">
+                    <div class="item check-order">
+                        <a id="btnCheckOrder" href="/">
+                            <span class="icon">
+                                <i class="ph ph-truck"></i>
+                            </span>
+                            <span class="text">Kiểm tra đơn hàng</span>
+                        </a>
+                    </div>
+                    <div class="item cart">
+                        <a href="/">
+                            <i class="ph ph-shopping-cart icon-cart"></i>
+                            <label>
+                                <i class="ph ph-caret-left"></i>
+                                <span id="cart-total">0</span>
+                            </label>
+                        </a>
+                    </div>
+
+                    <div class="item login-button">
+                        <a href="#login" class="login-box">
+                            <i class="ph-thin ph-user-circle"></i>
+                            <div class="login-content">
+                                <span class="title">Đăng nhập</span>
+                            </div>
+                        </a>
+                    </div>
+
+            </div>
+        </div>
+    </header> 
+
+    <section id="section-breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="/"><span itemprop="name" content="Trang chủ"><i class="ph ph-house"></i></i> Trang chủ</span></a>
+                    <meta itemprop="position" content="1">
+                </li>
+    
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <i class="fa fa-angle-right"></i> <a itemprop="item" href="/dien-thoai-di-dong" title="Điện thoại di động giá tốt, chính hãng - Hoàng Hà Mobile" class="actived"><span itemprop="name" content="Điện thoại">Điện thoại</span></a>
+                    <meta itemprop="position" content="2">
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="login" id="login">
+        <div class="login-modal">
+        <div class="login-container">
+            <header class="login-header">
+                <div class="login-header__cont">
+                    <div class="login-header__img">&nbsp;</div>
+                    <a href="#main-header" class="login-close-button">
+                        <i class="ph-bold ph-x"></i>
+                    </a>
+                </div>
+            </header>
+            <div class="login-content">
+                <div class="login-content__cont">
+                    <div class="login-content-header">
+                        <h4>Đăng nhập</h4>
+                    </div>
+                    <div class="toggle position-2-actived">
+                        <div class="toggle-container ">
+                        <div class="toggle-background">
+                            <div class="toggle-labels">
+                                <label class="position-1-label">Tài khoản khách</label>
+                                <label class="position-2-label">Tài khoản admin</label>
+                            </div>
+                            <div class="toggle-selection">
+                                <div class="toggle-selection-button"></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <form class="login-form" method="post">
+                        <div class="row">
+                            <div class="label">Tài khoản</div>
+                            <div class="input">
+                                <input type="text" name="userName" id="userName" placeholder="Tài khoản"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="label">Mật khẩu</div>
+                            <div class="input">
+                                <input type="password" name="password" id="password" placeholder="Mật khẩu"/>
+                            </div>
+                        </div>
+                        <div class="row adminInput">
+                            <div class="label">Admin ID</div>
+                            <div class="input">
+                                <input type="text" name="adminID" id="adminID" placeholder="AdminID"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-submit" type="submit">ĐĂNG NHẬP</button>
+                        </div>
+                        <div class="row">
+                            <a href="/" class="register">Đăng ký</a>
+                            <a href="/" class="forgotpass">Quên mật khẩu?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="section-phone">
+		<div class="container">
+			<div class="product-details">
+				<div class="top-product">
+					<h1>
+						Điện thoại di động Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng
+
+					</h1>
+					
+				</div>
+				
+				<div class="product-details-container">
+					<div class="product-image">
+
+						<div class="love-this-button">
+								<a title="Thêm vào sản phẩm yêu thích" href="javascript:wishProduct(2994, false)">
+									<i class="ph ph-heart icon-love-1"></i>
+                                    <i class="ph-fill ph-heart icon-love-2"></i>
+								</a>
+						</div>
+                        <img src="https://cdn.hoanghamobile.com/i/productlist/dsp/Uploads/2023/02/02/image-removebg-preview_638109022233382155.png" title="phone image"/>
+					</div>
+
+                <div class="product-center" style="position:relative;">
+                    <p class="price current-product-price">
+                        <strong>
+                            24,990,000 ₫
+                        </strong>
+                            <i><strike>26,990,000 ₫</strike></i>
+
+                        <i> | Giá đã bao gồm 10% VAT</i>
+                        
+                        
+                    </p>
+                    <p class="freeship">
+                            <i class="icon-freeship-truck"></i>
+                            <span>
+                                Miễn phí vận chuyển toàn quốc
+                            </span>
+                    </p>
+
+
+                    <div style="position:absolute; right:0; display:none;">
+                        <label>SKU:</label> <strong id="dfSKU">S916BD</strong>
+                    </div>
+
+                        <div class="product-option version">
+                            <strong class="label">Lựa chọn phiên bản</strong>
+                            <div class="options" id="versionOption" data-id="5">
+                                    <div data-sku="S916BD" class="item selected">
+                                        <a href="/dien-thoai-di-dong/samsung-galaxy-s23-plus-8gb-256gb-chinh-hang">
+                                            <span><label><strong>256GB</strong></label></span>
+                                            <strong>24,990,000 ₫</strong>
+                                        </a>
+                                    </div>
+                                    <div data-sku="S916PD" class="item ">
+                                        <a href="/dien-thoai-di-dong/samsung-galaxy-s23-plus-8gb-512gb-chinh-hang">
+                                            <span><label><strong>512GB</strong></label></span>
+                                            <strong>27,990,000 ₫</strong>
+                                        </a>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="product-quantity">
+                            <p>Số lượng sản phẩm còn lại: <span class="product-number">05</span></p>
+                        </div>
+
+                        <div class="product-promotion">
+                            <strong class="label text-green">KHUYẾN MÃI</strong>
+                            <ul>
+
+                                        <li><span class="bag">KM 1</span></li>
+                                        <li>
+                                            Giảm ngay 2.000.000đ
+                                        </li>
+
+                            </ul>
+                        </div>
+
+                    <div class="product-action">
+                            <a title="Mua ngay" data-sku="S916BD" href="javascript:;" class="btn-red btnQuickOrder btnbuy"><strong>MUA NGAY</strong><span> Giao tận nhà (COD) <br>Hoặc Nhận tại cửa hàng</span></a>
+
+                            <a title="Mua trả góp" href="/tra-gop/dien-thoai-di-dong/samsung-galaxy-s23-plus-8gb-256gb-chinh-hang" class="btnInstallment btn-green btnbuy"><strong>TRẢ GÓP</strong><span>Công ty Tài chính <br> Hoặc 0% qua thẻ tín dụng</span></a>
+                            <a style="width:43px; display:flex; flex-direction:column; max-width:80px; padding:5px;" title="Thêm vào giỏ hàng" data-sku="S916BD" href="javascript:;" class="add-cart btn-orange btnbuy btn-icon">
+                                <i class="ph ph-shopping-cart"></i>
+                                <span class="icon-cart-plus">
+                                    <i class="ph ph-plus"></i>
+                                </span>
+                                <label style="font-size:11px;">Thêm giỏ hàng</label>
+                            </a>
+                    </div>
+
+                </div>
+						<div class="product-shop">
+                            <div class="warranty">
+                                <h4>THÔNG TIN BẢO HÀNH</h4>
+                                    <p><span><strong>Bảo hành 12 tháng chính hãng</strong></span></p>
+                                    <div class="guarantee-item">
+                                        <i class="ph ph-shield-check"></i>
+                                    </div>
+                                    
+                            </div>
+						</div>
+				</div>
+			</div>	
+		</div>
+    </section>
+
+    <section id="section-phone-preview">
+        <div class="container">
+            <div class="product-layout product-layout-grid">
+                <div class="product-left">
+                        <div class="product-text" id="productContent" data-height="652">
+                            <p class="MsoNormal" style="margin-bottom:6.0pt;text-align:center;line-height:150%">
+                                <b><span lang="EN" style="font-size:23.0pt;line-height:1.5;font-weight: 700;">Mua điện thoại di động Samsung Galaxy S23 Plus 8GB/256GB chính hãng giá rẻ tại Hoàng Hà Mobile<o:p></o:p></span></b>
+                            </p>
+                            <p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%">&nbsp;</span></p>
+                            <p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%">Đầu năm 2023,
+                            Samsung đã trở lại thị trường với sự kiện ra mắt sản phẩm mới Galaxy Unpacked.
+                            Sản phẩm được rất nhiều người dùng quan tâm không gì khác chính là Galaxy S23
+                            Series. Với thiết kế cao cấp cùng công nghệ hàng đầu, <a href="https://hoanghamobile.com/dien-thoai-di-dong/samsung/samsung-galaxy-s23">Galaxy
+                            S23 Series</a> hứa hẹn sẽ khuấy đảo thị trường flagship trong thời gian tới. Nếu
+                            bạn đang muốn tìm mua một phiên bản trong dòng sản phẩm năm nay thì đừng bỏ qua
+                            Galaxy S23 Plus 8GB/256GB chính hãng tại Hoàng Hà Mobile nhé. <o:p></o:p></span></p>
+                            <p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%;"></span><span lang="EN" style="font-size:12.0pt;
+                            line-height:150%"><o:p></o:p></span></p>
+                            <p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><img src="https://cdn.hoanghamobile.com/i/content/Uploads/2023/02/08/11_638114703064300608.jpg"><br></p><p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><b><span lang="EN" style="font-size:
+                            18.0pt;line-height:150%">Thiết kế cao cấp, màn hình
+                            AMOLED 6.6 inch sắc nét&nbsp;<o:p></o:p></span></b></p>
+                            <p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%">Galaxy S23 là
+                            dòng điện thoại cao cấp nhất của nhà Samsung. Mỗi năm nhà sản xuất lại hoàn thiện
+                            thiết kế để mang đến những chiếc điện thoại vừa có hiệu năng vượt trội vừa bắt
+                            mắt. Chiếc Galaxy S23 Plus 8GB/256GB chính hãng năm nay không có quá nhiều thay
+                            đổi so với Galaxy S22 Plus đã ra mắt. Phần lưng máy thiết kế nguyên khối, với
+                            mô-đun camera không còn tách biệt với thân máy như trước, khiến nó trông tối giản
+                            hơn. Khung điện thoại chắc chắn với các góc được bo tròn tinh tế. Phần camera
+                            được đặt ở góc trên bên trái. Galaxy S23 Plus 8GB/256GB chính hãng có độ dày
+                            7.6mm và trọng lượng khoảng 196 gram nên người dùng có thể cầm trên tay và thao
+                            tác dễ dàng.</span></p>
+                            <p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><img src="https://cdn.hoanghamobile.com/i/content/Uploads/2023/02/08/22_638114703064300608.jpg"><span lang="EN" style="font-size:12.0pt;line-height:150%"><br></span></p><p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%"> <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%;"></span><span lang="EN" style="font-size:12.0pt;
+                            line-height:150%"><o:p></o:p></span>
+                            </p>
+                            <p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%">Mặt trước của
+                            Galaxy S23 Plus 8GB/256GB chính hãng là màn hình được phủ kính cường lực
+                            Corning Gorilla Glass Victus 2 chắc chắn, giúp tăng độ bền cho máy và hạn chế
+                            những trầy xước do va đập trong quá trình sử dụng. Nhà sản xuất đã sử dụng tấm
+                            nền Dynamic AMOLED 2X với độ phân giải 1080 x 2340 pixels. Kích thước màn hình
+                            6.6 inch cùng với tỷ lệ khung hình/ thân máy gần 90% cho người dùng không gian
+                            hiển thị nội dung tối đa, mang đến trải nghiệm không giới hạn khi làm việc hoặc
+                            giải trí như xem phim, chơi game. Ngoài ra, màn hình của Galaxy S23 Plus
+                            8GB/256GB chính hãng có tần số quét 120Hz, giúp cho mọi thao tác của người dùng
+                            luôn mượt mà, trơn tru, không có cảm giác bị lag, đứng hình. <o:p></o:p></span></p>
+                            <p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><b><span lang="EN" style="font-size:
+                            18.0pt;line-height:150%">Bộ ba camera 50MP và công
+                            nghệ chụp đêm ấn tượng&nbsp;<o:p></o:p></span></b></p>
+                            <p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%">Năm nay, Samsung
+                            tập trung vào công nghệ chụp ảnh cho những chiếc điện thoại Galaxy S23 Series.
+                            Các cảm biến năm nay lớn hơn khoảng 23% so với năm ngoái. Với Galaxy S23 Plus
+                            8GB/256GB chính hãng, máy được trang bị cảm biến chính độ phân giải lên tới
+                            50MP. Ngoài ra điện thoại còn có thêm một camera góc siêu rộng 12MP, mở góc 120
+                            độ và một camera tele 10MP. Với cụm camera sau này, Galaxy S23 Plus 8GB/256GB
+                            chính hãng có thể hỗ trợ người dùng chụp những bức ảnh chất lượng, sắc nét, bắt
+                            trọn mọi khoảnh khắc trong cuộc sống. Nhà sản xuất giới thiệu chiếc Galaxy S23
+                            Plus có thể chụp ở đa chế độ khác nhau như HDR, chân dung, xóa phông,... cho
+                            người dùng những bức ảnh cực nghệ chỉ sau một lần chạm.&nbsp;</span></p>
+                            <p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><img src="https://cdn.hoanghamobile.com/i/content/Uploads/2023/02/08/33_638114703064300608.jpg"><br></p><p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%;"></span><span lang="EN" style="font-size:12.0pt;
+                            line-height:150%"><o:p></o:p></span></p>
+                            <p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%">Đặc biệt, công
+                            nghệ chụp đêm trên chiếc điện thoại Galaxy S23 Plus 8GB/256GB chính hãng chắc
+                            chắn sẽ khiến bạn bất ngờ. Ngoài cảm biến lớn, Samsung còn tích hợp thêm công
+                            nghệ AI giúp bắt trọn chi tiết và hạn chế nhiễu ảnh do thiếu sáng. Mặt trước của
+                            điện thoại còn có một camera selfie 12MP hỗ trợ người dùng chụp các bức ảnh tự
+                            sướng sắc nét, màu tự nhiên, hoặc tham gia vào các cuộc gọi video. Galaxy S23
+                            Plus 8GB/256GB chính hãng cũng có thể quay những thước phim sắc nét với chế độ
+                            8K nhờ công nghệ ổn định hình ảnh Super Steady Video. <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><b><span lang="EN" style="font-size:18.0pt;line-height:115%">Chip Snapdragon 8 Gen 2 mạnh
+                            mẽ, viên pin khủng 4700mAh</span></b><br></p><p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%">Chiếc điện thoại
+                            Galaxy S23 Plus 8GB/256GB chính hãng được trang bị con chip Snapdragon 8 Gen 2
+                            mới nhất đến từ nhà Qualcomm. Đây là đối tác sản xuất chip lâu năm với Samsung.
+                            Con chip này đã được tối ưu về hiệu năng xử lý và tiết kiệm năng lượng đáng kể.
+                            Nó có thể xử lý đa tác vụ cực mượt, chạy những tựa game nặng mà không bị giật,
+                            lag. Ngoài ra, Galaxy S23 Plus 8GB/256GB chính hãng sử dụng hệ điều hành
+                            Android 13 mới nhất với giao diện đẹp mắt và một số tính năng mới. Galaxy S23
+                            Plus 8GB/256GB chính hãng hứa hẹn sẽ là chiếc điện thoại có hiệu năng vượt trội
+                            trong phân khúc giá cao cấp.</span></p><p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><img src="https://cdn.hoanghamobile.com/i/content/Uploads/2023/02/08/44_638114703064300608.jpg"><span lang="EN" style="font-size:12.0pt;line-height:150%"><br></span></p><p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%"> <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%"></span><span lang="EN" style="font-size:12.0pt;
+                            line-height:150%"><o:p></o:p></span></p>
+                            <p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%">Với phiên bản
+                            này, điện thoại sẽ có RAM 8GB và dung lượng lưu trữ 256GB. Bạn có thể lưu các
+                            thông tin, tài liệu quan trọng và xử lý mọi lúc mọi nơi chỉ với chiếc điện thoại.
+                            Ngoài ra, điện thoại Galaxy S23 Plus 8GB/256GB chính hãng được trang bị viên
+                            pin dung lượng lên tới 4700mAh. Đây là thời lượng pin phổ biến trên những chiếc
+                            điện thoại Android, cho phép người dùng sử dụng liên tục trong suốt một ngày
+                            dài. Nhà sản xuất cũng trang bị cho máy khả năng sạc nhanh 45W, có thể sạc đầy
+                            65% pin chỉ trong 30 phút. Galaxy S23 Plus 8GB/256GB chính hãng có sẵn các tùy
+                            chọn màu đen, kem, xanh, tím phù hợp với tất cả đối tượng người dùng trong mọi
+                            lứa tuổi.</span></p>
+                            <p class="MsoNormal" style="margin-bottom: 6pt; line-height: 21px; text-align: justify;"></p>
+                            <p class="MsoNormal" style="margin-bottom:6.0pt;text-align:justify;line-height:
+                            150%"><span lang="EN" style="font-size:12.0pt;line-height:150%">Điện thoại di động
+                            Samsung Galaxy S23 Plus 8GB/256GB chính hãng được bán trên hệ thống của Hoàng
+                            Hà Mobile với mức giá ưu đãi và chế độ bảo hành chính hãng 12 tháng. Tham khảo
+                            thông tin trên và đặt mua sản phẩm ngay hôm nay.&nbsp;</span><span lang="EN"><o:p></o:p></span></p>
+                        </div>
+                        <div class="view-more-container">
+                            <a href="javascript:;" id="viewMoreContent">Xem thêm</a>
+                        </div>
+                </div>
+    
+                <div class="product-right">
+                    <div class="product-specs">
+                        <h3>Thông số kỹ thuật Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng</h3>
+                        <div class="product-spect-img">
+                            <img src="https://cdn.hoanghamobile.com/i/productlist/dsp/Uploads/2023/02/02/s23-xang.png">
+                                <a data-padding="0px" data-width="600px" class="ajax-modal product-specs-button" href="#close-modal"><span class="icon-config"><i class="ph ph-gear"></i></span> <strong>Cấu hình chi tiết</strong></a>
+                        </div>
+    
+                        <div class="specs-special">
+                                <ol>
+                                    <li>
+                                        <strong>Độ phân giải::</strong>
+                                        <span>2340 x 1080 (Màn hình phẳng FHD+)</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Màn hình rộng::</strong>
+                                        <span>6.6 inch</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Độ phân giải:</strong>
+                                        <span>50MP x 12MP x 10 MP, 12MP</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Chip xử lý (CPU):</strong>
+                                        <span>Snapdragon® 8 Gen 2 Mobile Platform for Galaxy</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Bộ nhớ trong (ROM):</strong>
+                                        <span>256GB</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>RAM:</strong>
+                                        <span>8GB</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Mạng di động:</strong>
+                                        <span>Hỗ trợ 5G</span>
+                                    </li>
+                                </ol>
+                                <ol>
+                                    <li>
+                                        <strong>Dung lượng pin:</strong>
+                                        <span>4700mAh</span>
+                                    </li>
+                                </ol>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-product">
+        <div class="container">
+            <div class="box-product-home box-home">
+                <div class="header">
+                    <h4><a href="#phone.html">GỢI Ý DÀNH CHO BẠN</a></h4>
+                </div>
+                <div class="col-content lts-product">
+
+                    <div class="item">
+
+                    <div class="img">
+                        <a href="phone.html" title="Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng">
+                            <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/02/s23-xang.png" alt="Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng" title="Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng">
+                        </a>
+                    </div>
+
+                        <span class="sales">
+                            <i class="ph-fill ph-lightning"></i> Giảm 2,000,000 ₫
+                        </span>
+
+                    <div class="info">
+                        <a href="phone.html" class="title" title="Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng">Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng</a>
+                        <span class="price">
+                                <strong>24,990,000 ₫</strong>
+                                            <strike>26,990,000 ₫</strike>
+                        </span>
+                    </div>
+                            <div class="note">
+                                <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                    <strong class="text-orange">VÀ 9 KM KHÁC</strong>
+                            </div>
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="phone.html" title="Samsung Galaxy S23 Ultra 8GB/256GB - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/02/image-removebg-preview_638109032737367137.png" alt="Samsung Galaxy S23 Ultra 8GB/256GB - Chính hãng" title="Samsung Galaxy S23 Ultra 8GB/256GB - Chính hãng">
+                            </a>
+                        </div> 
+        
+                            <span class="sales">
+                                <i class="icon-flash2"></i> Giảm 8,000,000 ₫
+                            </span>
+        
+                        <div class="info">
+                            <a href="phone.html" class="title" title="Samsung Galaxy S23 Ultra 8GB/256GB - Chính hãng">Samsung Galaxy S23 Ultra 8GB/256GB - Chính hãng</a>
+                            <span class="price">
+                                    <strong>23,990,000 ₫</strong>
+                                                <strike>31,990,000 ₫</strike>
+                            </span>
+        
+                        </div>
+        
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 8 KM KHÁC</strong>
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="img">
+                            <a href="phone.html" title="Samsung Galaxy S23 - 8GB/256GB - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/02/image-removebg-preview-2.png" alt="Samsung Galaxy S23 - 8GB/256GB - Chính hãng" title="Samsung Galaxy S23 - 8GB/256GB - Chính hãng">
+                            </a>
+                        </div>
+        
+        
+        
+                            <span class="sales">
+                                <i class="icon-flash2"></i> Giảm 1,000,000 ₫
+                            </span>
+        
+                        <div class="info">
+                            <a href="phone.html" class="title" title="Samsung Galaxy S23 - 8GB/256GB - Chính hãng">Samsung Galaxy S23 - 8GB/256GB - Chính hãng</a>
+                            <span class="price">
+                                    <strong>23,990,000 ₫</strong>
+                                                <strike>24,990,000 ₫</strike>
+                            </span>
+        
+                        </div>
+        
+        
+                                <div class="note">
+                                    <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                        <strong class="text-orange">VÀ 9 KM KHÁC</strong>
+                                </div>
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="phone.html" title="Samsung Galaxy A14 4G 4GB/128GB - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/01/13/a14-1.png" alt="Samsung Galaxy A14 4G 4GB/128GB - Chính hãng" title="Samsung Galaxy A14 4G 4GB/128GB - Chính hãng">
+                            </a>
+                        </div>
+
+                        <div class="cover">
+                        <div style="
+                        color: yellow;
+                        background: #00483D;
+                        margin: -95px 5px 0 52px;
+                        padding: 3px;
+                        border-radius: 6px;
+                        font-size: 11px;
+                        font-weight: 600;
+                        ">
+                        <span style="color:white">Tặng sạc 15W</span><br>
+                        <span style="color:yellow"></span>
+                        </div>
+        
+                        </div>  
+        
+                        <div class="info">
+                            <a href="phone.html" class="title" title="Samsung Galaxy A14 4G 4GB/128GB - Chính hãng">Samsung Galaxy A14 4G 4GB/128GB - Chính hãng</a>
+                            <span class="price">
+                                    <strong>4,490,000 ₫</strong>
+                                        </span>
+                        </div>
+        
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 9 KM KHÁC</strong>
+                        </div>
+                    </div>
+                    <div class="item">
+
+                        <div class="img">
+                            <a href="phone.html" title="Xiaomi 12T - Chính hãng">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/01/image-removebg-preview-1.png" alt="Xiaomi 12T - Chính hãng" title="Xiaomi 12T - Chính hãng">
+                            </a>
+                        </div>
+        
+                        <div class="info">
+                            <a href="phone.html" class="title" title="Xiaomi 12T - Chính hãng">Xiaomi 12T - Chính hãng</a>
+                            <span class="price">
+                                    <strong>10,790,000 ₫</strong>
+                                                <strike>12,490,000 ₫</strike>
+                            </span>
+        
+                        </div>
+        
+                        <div class="note">
+                            <span class="bag">KM</span> <label title="Giảm tới 300.000đ khi thanh toán qua VNPAY (Áp dụng từ 08/03- 31/03)">Giảm tới 300.000đ khi thanh toán qu...</label>
+                                <strong class="text-orange">VÀ 9 KM KHÁC</strong>
+                        </div>
+                    </div>
+                           
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-features">
+        <div class="container">
+            <div class="corevalue">
+                    <div class="item">
+                        <span class="icon">
+                            <i class="ph ph-seal-check"></i>
+                        </span>
+                        <div class="text">
+                            <span>Sản phẩm</span>
+                            <strong>CHÍNH HÃNG</strong>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="icon">
+                            <i class="ph ph-globe"></i>
+                        </span>
+                        <div class="text">
+                            <span>Miễn phí vận chuyển</span>
+                            <strong>TOÀN QUỐC</strong>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="icon">
+                            <i class="ph ph-headset"></i>
+                        </span>
+                        <div class="text">
+                            <span>Hotline hỗ trợ</span>
+                            <strong>1900.2091</strong>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="icon">
+                            <i class="ph ph-arrows-clockwise"></i>
+                        </span>
+                        <div class="text">
+                            <span>Thủ tục đổi trả</span>
+                            <strong>DỄ DÀNG</strong>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="close-modal">
+        <div class="jquery-modal blocker current"><div id="popup-modal" class="modal" style="width: 600px; padding: 0px; display: inline-block;">
+
+            <table class="table table-border">
+                    <tbody>
+                    <tr>
+                        <th colspan="2"><span class="f-16">Màn hình</span></th>
+                    </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Độ phân giải:</strong></td>
+                            <td>
+                                    <span>2340 x 1080 (Màn hình phẳng FHD+)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Màn hình rộng:</strong></td>
+                            <td>
+                                    <span>6.6 inch</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Độ sáng tối đa:</strong></td>
+                            <td>
+                                    <span>1200 nits</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Mặt kính cảm ứng:</strong></td>
+                            <td>
+                                    <span>Gorilla® Glass Victus® 2</span>
+                            </td>
+                        </tr>
+                    <tr>
+                        <th colspan="2"><span class="f-16">Camera sau</span></th>
+                    </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Độ phân giải</strong></td>
+                            <td>
+                                    <span>50MP x 12MP x 10 MP</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Tính năng</strong></td>
+                            <td>
+                                    <ol class="ol-specs">
+                                            <li>Zoom quang học 3x</li>
+                                            <li>Zoom Kỹ thuật số lên tới 30x</li>
+                                    </ol>
+                            </td>
+                        </tr>
+                    <tr>
+                        <th colspan="2"><span class="f-16">Camera trước</span></th>
+                    </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Độ phân giải</strong></td>
+                            <td>
+                                    <span>12MP</span>
+                            </td>
+                        </tr>
+                    <tr>
+                        <th colspan="2"><span class="f-16">Hệ điều hành &amp; CPU</span></th>
+                    </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Chip xử lý (CPU)</strong></td>
+                            <td>
+                                    <span>Snapdragon® 8 Gen 2 Mobile Platform for Galaxy</span>
+                            </td>
+                        </tr>
+                    <tr>
+                        <th colspan="2"><span class="f-16"> Bộ nhớ &amp; Lưu trữ</span></th>
+                    </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Bộ nhớ trong (ROM)</strong></td>
+                            <td>
+                                    <span>256GB</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray"><strong>RAM</strong></td>
+                            <td>
+                                    <span>8GB</span>
+                            </td>
+                        </tr>
+                    <tr>
+                        <th colspan="2"><span class="f-16">Kết nối</span></th>
+                    </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Mạng di động</strong></td>
+                            <td>
+                                    <span>Hỗ trợ 5G</span>
+                            </td>
+                        </tr>
+                    <tr>
+                        <th colspan="2"><span class="f-16">Pin &amp; Sạc</span></th>
+                    </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Dung lượng pin</strong></td>
+                            <td>
+                                    <span>4700mAh</span>
+                            </td>
+                        </tr>
+                    <tr>
+                        <th colspan="2"><span class="f-16">Tiện ích</span></th>
+                    </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Kháng nước, bụi:</strong></td>
+                            <td>
+                                    <span>IP68</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Tính năng đặc biệt</strong></td>
+                            <td>
+                                    <ol class="ol-specs">
+                                            <li>Samsung Health</li>
+                                            <li>Samsung Wallet</li>
+                                    </ol>
+                            </td>
+                        </tr>
+                    <tr>
+                        <th colspan="2"><span class="f-16">Thông tin chung</span></th>
+                    </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Chất liệu:</strong></td>
+                            <td>
+                                    <span>Khung viền Armor Aluminum</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-gray"><strong>Kích thước, khối lượng:</strong></td>
+                            <td>
+                                    <span>157,8 x 76,2 x 7,6 mm</span>
+                            </td>
+                        </tr>
+            </tbody></table>
+        
+        <a href="#section-phone-preview" rel="modal:close" class="close-modal icon-minutes"> </a>
+        </div>
+    </div>
+    </section>
+
+    <footer>
+        <div class="container">
+
+
+            <div class="bg">
+                <div class="col-content">
+                        <div class="link-content">
+                        <h4><a>Hỗ Trợ - Dịch Vụ</a></h4>
+                        <ul>
+                            <li><a href="/mua-hang-tra-gop">Mua hàng trả góp</a></li>
+                            <li><a href="/huong-dan-dat-hang">Hướng dẫn đặt hàng và thanh toán</a></li>
+                            <li><a href="/order/check">Tra cứu đơn hàng</a></li>
+                            <li><a href="/chinh-sach-bao-hanh">Chính sách bảo hành</a></li>
+                            <li><a href="/dat-hang/bao-hanh-mo-rong">Phạm vi, điều khoản gói bảo hành mở rộng</a></li>
+                            <li><a href="/chinh-sach-bao-mat">Chính sách bảo mật</a></li>
+                            <li><a href="/chinh-sach-giai-quyet-khieu-nai">Chính sách giải quyết khiếu nại</a></li>
+                            <li><a href="/dieu-khoan-mua-ban-hang-hoa">Điều khoản mua bán hàng hóa</a></li>
+                            <li><a href="/cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                        <div class="link-content">
+                        <h4><a>Thông Tin Liên Hệ</a></h4>
+                        <ul>
+                            <li><a href="/mua-hang-online">Bán hàng Online</a></li>
+                            <li><a>Chăm sóc Khách Hàng</a></li>
+                            <li><a>Hỗ Trợ Kỹ thuật</a></li>
+                            <li><a>Hỗ trợ Bảo hành &amp; Sửa chữa</a></li>
+                            <li><a>Liên hệ khối văn phòng</a></li>
+                        </ul>
+                    </div>
+                        <div class="link-content">
+                        <h4><a href="/he-thong-cua-hang">Hệ thống 124 siêu thị trên toàn quốc</a></h4>
+                        <ul>
+                            <li><a href="/he-thong-cua-hang">Danh sách 124 siêu thị trên toàn quốc</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Tổng đài</h4>
+                        <a class="hotline" href="tel:1900.2091">1900.2091</a>
+                    </div>
+
+                    <div>
+                        <h4>Thanh toán miễn phí</h4>
+                        <ul class="list-logo">
+                            <li>
+                                <img src="./img/logo-visa.png">
+                                <img src="./img/logo-master.png">
+                            </li>
+                            <li>
+                                <img src="./img/logo-jcb.png">
+                                <img src="./img/logo-samsungpay.png">
+                            </li>
+                            <li>
+                                <img src="./img/logo-atm.png">
+                                <img src="./img/logo-vnpay.png">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Hình thức vận chuyển</h4>
+                        <ul class="list-logo">
+                            <li>
+                                <img src="./img/nhattin.jpg">
+                                <img src="./img/vnpost.jpg">
+                            </li>
+                        </ul>
+                        <div class="mg-top20">
+                            <a href="http://online.gov.vn/Home/WebDetails/28738" target="_blank"><img src="./img/logo-bct.png"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <p>© 2023. CÔNG TY CỔ PHẦN XÂY DỰNG VÀ ĐẦU TƯ THƯƠNG MẠI HOÀNG HÀ. MST:  0106713191. (Đăng ký lần đầu: Ngày 15 tháng 12 năm 2014, Đăng ký thay đổi ngày 24/11/2022)</p>
+                    <p><strong>Trang web không phải nguyên mẫu và được tạo dựa theo website</strong></p>
+                    <p>Địa chỉ web: <a href="https://hoanghamobile.com/dien-thoai-di-dong">hoanghamobile.com</a> </p>
+                    
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
