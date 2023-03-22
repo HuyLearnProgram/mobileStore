@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css"/>
+    <!--FONT FAMILY LINK-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <!--ICON LINK FROM ION ICON-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Mobile Phone Store</title>
+    <script defer src="./src/script.js"></script>
+</head>
+<body>
+    <header id="main-header">
+        <div class="heading">
+            <div class="container">
+
+                <div class="logo">
+                    <a href="/" title="Mobile Store Logo">
+                        <img src="./img/logo.png" title="Mobile Store Image"/>
+                    </a>
+                </div>
+
+                <div class="search-box">
+                    <form method="get">
+                        <div class="border">
+                            <input type="text" id="kwd" name="kwd" placeholder="Hôm nay bạn cần tìm gì?" autocomplete="off">
+                            <button type="submit" class="search">
+                                <ion-icon name="search-outline" class="icon-search"></ion-icon>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="order-tools">
+                    <div class="item check-order">
+                        <a id="btnCheckOrder" href="check.html">
+                            <span class="icon">
+                                <i class="ph ph-truck"></i>
+                            </span>
+                            <span class="text">Kiểm tra đơn hàng</span>
+                        </a>
+                    </div>
+                    <div class="item cart">
+                        <a href="cart.html">
+                            <i class="ph ph-shopping-cart icon-cart"></i>
+                            <label>
+                                <i class="ph ph-caret-left"></i>
+                                <span id="cart-total">0</span>
+                            </label>
+                        </a>
+                    </div>
+
+                    <div class="item login-button">
+                        <a href="#login" class="login-box">
+                            <i class="ph-thin ph-user-circle"></i>
+                            <div class="login-content">
+                                <span class="title">Đăng nhập</span>
+                            </div>
+                        </a>
+                    </div>
+
+            </div>
+        </div>
+    </header> 
+
+    <section id="section-check-order">
+        <div class="container">
+            <div class="check-header-cont">
+                <h3 class="check-header">
+                    Đơn hàng của tôi
+                </h3>
+            </div>
+            <div class="check-container">
+                <div class="check-nav-cont">
+                    <nav class="check-nav">
+                        <ul>
+                            <li class="selected">Tất cả đơn hàng</li>
+                            <li>Chờ thanh toán</li>
+                            <li>Đang xử lí</li>
+                            <li>Đang vận chuyển</li>
+                            <li>Đã giao</li>
+                            <li>Đã hủy</li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="check-search-cont">
+                    <div class="check-search">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <input name="search" class="input-left" placeholder="Vui lòng nhập mã đơn hàng" type="search">
+                        <div class="input-right">Tìm đơn hàng</div>
+                    </div>
+                </div>
+                <div class="check-order-cont">
+                    <div class="check-order">
+                        <div class="check-order-header">
+                            <i class="ph ph-truck"></i>
+                            <h4 class="check-status">Giao hàng thành công</h4>
+                        </div>
+                        <div class="check-order-content">
+                            <div class="check-detail">
+                            <div class="check-img">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/02/s23-xang.png" title="Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng"/>
+                                <span class="check-quantity">x1</span>
+                            </div>
+                            <div class="check-info">
+                                <span>Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng</span>
+                            </div>
+                            </div>
+                            <div class="check-price">24,990,000 ₫</div>
+                        </div>
+                        <div class="check-order-footer">
+                            <div class="check-total">
+                                <span class="title">Tổng tiền: </span>
+                                <span class="total">24,990,000 ₫</span>
+                            </div>
+                            <div class="check-btn">
+                                <div>Mua lại</div>
+                                <div>Xem chi tiết</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="check-order">
+                        <div class="check-order-header">
+                            <i class="ph ph-prohibit"></i>
+                            <h4 class="check-status">Đã hủy</h4>
+                        </div>
+                        <div class="check-order-content">
+                            <div class="check-detail">
+                            <div class="check-img">
+                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/02/s23-xang.png" title="Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng"/>
+                                <span class="check-quantity">x1</span>
+                            </div>
+                            <div class="check-info">
+                                <span>Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng</span>
+                            </div>
+                            </div>
+                            <div class="check-price">24,990,000 ₫</div>
+                        </div>
+                        <div class="check-order-footer">
+                            <div class="check-total">
+                                <span class="title">Tổng tiền: </span>
+                                <span class="total">24,990,000 ₫</span>
+                            </div>
+                            <div class="check-btn">
+                                <div>Mua lại</div>
+                                <div>Xem chi tiết</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="login" id="login">
+        <div class="login-modal">
+        <div class="login-container">
+            <header class="login-header">
+                <div class="login-header__cont">
+                    <div class="login-header__img">&nbsp;</div>
+                    <a href="#main-header" class="login-close-button">
+                        <i class="ph-bold ph-x"></i>
+                    </a>
+                </div>
+            </header>
+            <div class="login-content">
+                <div class="login-content__cont">
+                    <div class="login-content-header">
+                        <h4>Đăng nhập</h4>
+                    </div>
+                    <div class="toggle position-2-actived">
+                        <div class="toggle-container ">
+                        <div class="toggle-background">
+                            <div class="toggle-labels">
+                                <label class="position-1-label">Tài khoản khách</label>
+                                <label class="position-2-label">Tài khoản admin</label>
+                            </div>
+                            <div class="toggle-selection">
+                                <div class="toggle-selection-button"></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <form class="login-form" method="post">
+                        <div class="row">
+                            <div class="label">Tài khoản</div>
+                            <div class="input">
+                                <input type="text" name="userName" id="userName" placeholder="Tài khoản"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="label">Mật khẩu</div>
+                            <div class="input">
+                                <input type="password" name="password" id="password" placeholder="Mật khẩu"/>
+                            </div>
+                        </div>
+                        <div class="row adminInput">
+                            <div class="label">Admin ID</div>
+                            <div class="input">
+                                <input type="text" name="adminID" id="adminID" placeholder="AdminID"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-submit" type="submit">ĐĂNG NHẬP</button>
+                        </div>
+                        <div class="row">
+                            <a href="/" class="register">Đăng ký</a>
+                            <a href="/" class="forgotpass">Quên mật khẩu?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+
+
+            <div class="bg">
+                <div class="col-content">
+                        <div class="link-content">
+                        <h4><a>Hỗ Trợ - Dịch Vụ</a></h4>
+                        <ul>
+                            <li><a href="/mua-hang-tra-gop">Mua hàng trả góp</a></li>
+                            <li><a href="/huong-dan-dat-hang">Hướng dẫn đặt hàng và thanh toán</a></li>
+                            <li><a href="/order/check">Tra cứu đơn hàng</a></li>
+                            <li><a href="/chinh-sach-bao-hanh">Chính sách bảo hành</a></li>
+                            <li><a href="/dat-hang/bao-hanh-mo-rong">Phạm vi, điều khoản gói bảo hành mở rộng</a></li>
+                            <li><a href="/chinh-sach-bao-mat">Chính sách bảo mật</a></li>
+                            <li><a href="/chinh-sach-giai-quyet-khieu-nai">Chính sách giải quyết khiếu nại</a></li>
+                            <li><a href="/dieu-khoan-mua-ban-hang-hoa">Điều khoản mua bán hàng hóa</a></li>
+                            <li><a href="/cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                        <div class="link-content">
+                        <h4><a>Thông Tin Liên Hệ</a></h4>
+                        <ul>
+                            <li><a href="/mua-hang-online">Bán hàng Online</a></li>
+                            <li><a>Chăm sóc Khách Hàng</a></li>
+                            <li><a>Hỗ Trợ Kỹ thuật</a></li>
+                            <li><a>Hỗ trợ Bảo hành &amp; Sửa chữa</a></li>
+                            <li><a>Liên hệ khối văn phòng</a></li>
+                        </ul>
+                    </div>
+                        <div class="link-content">
+                        <h4><a href="/he-thong-cua-hang">Hệ thống 124 siêu thị trên toàn quốc</a></h4>
+                        <ul>
+                            <li><a href="/he-thong-cua-hang">Danh sách 124 siêu thị trên toàn quốc</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Tổng đài</h4>
+                        <a class="hotline" href="tel:1900.2091">1900.2091</a>
+                    </div>
+
+                    <div>
+                        <h4>Thanh toán miễn phí</h4>
+                        <ul class="list-logo">
+                            <li>
+                                <img src="./img/logo-visa.png">
+                                <img src="./img/logo-master.png">
+                            </li>
+                            <li>
+                                <img src="./img/logo-jcb.png">
+                                <img src="./img/logo-samsungpay.png">
+                            </li>
+                            <li>
+                                <img src="./img/logo-atm.png">
+                                <img src="./img/logo-vnpay.png">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Hình thức vận chuyển</h4>
+                        <ul class="list-logo">
+                            <li>
+                                <img src="./img/nhattin.jpg">
+                                <img src="./img/vnpost.jpg">
+                            </li>
+                        </ul>
+                        <div class="mg-top20">
+                            <a href="http://online.gov.vn/Home/WebDetails/28738" target="_blank"><img src="./img/logo-bct.png"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <p>© 2023. CÔNG TY CỔ PHẦN XÂY DỰNG VÀ ĐẦU TƯ THƯƠNG MẠI HOÀNG HÀ. MST:  0106713191. (Đăng ký lần đầu: Ngày 15 tháng 12 năm 2014, Đăng ký thay đổi ngày 24/11/2022)</p>
+                    <p><strong>Trang web không phải nguyên mẫu và được tạo dựa theo website</strong></p>
+                    <p>Địa chỉ web: <a href="https://hoanghamobile.com/dien-thoai-di-dong">hoanghamobile.com</a> </p>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
