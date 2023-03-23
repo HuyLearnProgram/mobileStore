@@ -13,7 +13,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>Mobile Phone Store</title>
-    <script defer src="./src/script.js"></script>
+    <script defer src="./src/phone.js"></script>
 </head>
 <body>
     <header id="main-header">
@@ -69,94 +69,19 @@
         </div>
     </header> 
 
-    <section id="section-check-order">
+    <section id="section-breadcrumb">
         <div class="container">
-            <div class="check-header-cont">
-                <h3 class="check-header">
-                    Đơn hàng của tôi
-                </h3>
-            </div>
-            <div class="check-container">
-                <div class="check-nav-cont">
-                    <nav class="check-nav">
-                        <ul>
-                            <li class="selected">Tất cả đơn hàng</li>
-                            <li>Chờ thanh toán</li>
-                            <li>Đang xử lí</li>
-                            <li>Đang vận chuyển</li>
-                            <li>Đã giao</li>
-                            <li>Đã hủy</li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="check-search-cont">
-                    <div class="check-search">
-                        <i class="ph ph-magnifying-glass"></i>
-                        <input name="search" class="input-left" placeholder="Vui lòng nhập mã đơn hàng" type="search">
-                        <div class="input-right">Tìm đơn hàng</div>
-                    </div>
-                </div>
-                <div class="check-order-cont">
-                    <div class="check-order">
-                        <div class="check-order-header">
-                            <i class="ph ph-truck"></i>
-                            <h4 class="check-status">Giao hàng thành công</h4>
-                        </div>
-                        <div class="check-order-content">
-                            <div class="check-detail">
-                            <div class="check-img">
-                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/02/s23-xang.png" title="Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng"/>
-                                <span class="check-quantity">x1</span>
-                            </div>
-                            <div class="check-info">
-                                <span>Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng</span>
-                            </div>
-                            </div>
-                            <div class="check-price">24,990,000 ₫</div>
-                        </div>
-                        <div class="check-order-footer">
-                            <div class="check-total">
-                                <span class="title">Tổng tiền: </span>
-                                <span class="total">24,990,000 ₫</span>
-                            </div>
-                            <div class="check-btn">
-                                <a href="phone.html" target="_blank">Mua lại</a>
-                                <a href="checkDetail.html">Xem chi tiết</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="check-order">
-                        <div class="check-order-header">
-                            <i class="ph ph-prohibit"></i>
-                            <h4 class="check-status">Đã hủy</h4>
-                        </div>
-                        <div class="check-order-content">
-                            <div class="check-detail">
-                            <div class="check-img">
-                                <img src="https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/02/s23-xang.png" title="Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng"/>
-                                <span class="check-quantity">x1</span>
-                            </div>
-                            <div class="check-info">
-                                <span>Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng</span>
-                            </div>
-                            </div>
-                            <div class="check-price">24,990,000 ₫</div>
-                        </div>
-                        <div class="check-order-footer">
-                            <div class="check-total">
-                                <span class="title">Tổng tiền: </span>
-                                <span class="total">24,990,000 ₫</span>
-                            </div>
-                            <div class="check-btn">
-                                <a href="phone.html">Mua lại</a>
-                                <a href="checkDetail.html">Xem chi tiết</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="/"><span itemprop="name" content="Trang chủ"><i class="ph ph-house"></i></i>Trang chủ</span></a>
+                    <meta itemprop="position" content="1">
+                </li>
+    
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <i class="fa fa-angle-right"></i> <a itemprop="item" href="/dien-thoai-di-dong" title="Điện thoại di động giá tốt, chính hãng - Hoàng Hà Mobile" class="actived"><span itemprop="name" content="Điện thoại">Đơn hàng của tôi</span></a>
+                    <meta itemprop="position" content="2">
+                </li>
+            </ol>
         </div>
     </section>
 
@@ -219,6 +144,109 @@
                 </div>
             </div>
         </div>
+        </div>
+    </section>
+    <section id="section-order-tracking">
+        <div class="container">
+            <div class="check-container">
+                <div class="order-heading">
+                    <h3>Theo dõi đơn hàng #481771442</h3>
+                    <div class="view-detail">Xem chi tiết đơn hàng</div>
+                </div>
+                <div class="order-track">
+                    <div class="order-track--left">
+                        <div class="inner">
+                            <div class="order-status-heading">
+                                <span class="delivery-text">Giao hàng thành công</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress__field in-progress">
+                                    <div class="step-bar">
+                                        <span class="step-bar__circle"></span>
+                                        <span class="step-bar__line"></span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-info__status-text">Giao hàng thành công</div>
+                                        <div class="step-info__substate-text"></div>
+                                        <div class="step-info__hint"></div>
+                                        <div class="step-info__time">07:51, Thứ bảy 18-03-2023</div>
+                                        <div class="step-info__divider"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress__field">
+                                    <div class="step-bar">
+                                        <span class="step-bar__circle"></span>
+                                        <span class="step-bar__line"></span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-info__status-text">Đang vận chuyển</div>
+                                        <div class="step-info__substate-text">Giao hàng không thành công lần 1 [Lý do: Khách hàng hẹn giao ngày khác]</div>
+                                        <div class="step-info__hint"></div>
+                                        <div class="step-info__time">22:00, Thứ sáu 17-03-2023</div>
+                                        <div class="step-info__divider"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress__field">
+                                    <div class="step-bar">
+                                        <span class="step-bar__circle"></span>
+                                        <span class="step-bar__line"></span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-info__status-text">Đang xử lý</div>
+                                        <div class="step-info__substate-text">Lấy hàng thành công</div>
+                                        <div class="step-info__hint"></div>
+                                        <div class="step-info__time">10:21, Thứ tư 15-03-2023</div>
+                                        <div class="step-info__divider"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress__field">
+                                    <div class="step-bar">
+                                        <span class="step-bar__circle"></span>
+                                        <span class="step-bar__line"></span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-info__status-text">Chờ xác nhận</div>
+                                        <div class="step-info__substate-text">Tiki đã tiếp nhận đơn hàng</div>
+                                        <div class="step-info__hint"></div>
+                                        <div class="step-info__time">18:38, Thứ ba 14-03-2023</div>
+                                        <div class="step-info__divider"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress__field">
+                                    <div class="step-bar">
+                                        <span class="step-bar__circle"></span>
+                                        <span class="step-bar__line"></span>
+                                    </div>
+                                    <div class="step-info">
+                                        <div class="step-info__status-text">Đợi thanh toán</div>
+                                        <div class="step-info__substate-text"></div>
+                                        <div class="step-info__hint"></div>
+                                        <div class="step-info__time">18:32, Thứ ba 14-03-2023</div>
+                                        <div class="step-info__divider"></div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="order-track--right">
+                        <p class="item-list-title">Kiện hàng gồm</p>
+                        <div class="items">
+                            <div class="item">
+                                <div class="image" style="background-image: url('https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/02/02/s23-xang.png');">
+                                    <span class="qty">x1</span>
+                                </div>
+                                <div class="info">
+                                    <a class="name" href="phone.html">Samsung Galaxy S23 Plus - 8GB/256GB - Chính hãng</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -303,6 +331,7 @@
                     
                 </div>
             </div>
+
         </div>
     </footer>
 
