@@ -1060,6 +1060,185 @@ input[type="checkbox"] {
           top: -28.5px;
           right: 4.5px; }
 
+#section-comment .full-width-content {
+  background: #fff 0% 0% no-repeat padding-box;
+  box-shadow: 0 3px 6px #00000029;
+  border-radius: 14px;
+  padding: 20px 30px;
+  margin: 30px 0; }
+  #section-comment .full-width-content .review-content {
+    margin: 1.5rem 5rem 0 5rem; }
+    #section-comment .full-width-content .review-content .item {
+      display: flex;
+      margin-bottom: 2rem; }
+      #section-comment .full-width-content .review-content .item .avt {
+        width: 6rem;
+        height: 5.5rem;
+        border: 1px solid #ccc;
+        border-radius: 2.5rem;
+        background: #f1f1f1;
+        overflow: hidden; }
+        #section-comment .full-width-content .review-content .item .avt img {
+          max-width: 100%; }
+      #section-comment .full-width-content .review-content .item .info {
+        font-size: 1.4rem;
+        padding-left: 20px;
+        flex-basis: 100%; }
+        #section-comment .full-width-content .review-content .item .info p {
+          margin: 5px 0;
+          display: flex;
+          align-items: start; }
+        #section-comment .full-width-content .review-content .item .info .content {
+          margin-top: 15px;
+          text-align: justify;
+          line-height: 1.4; }
+        #section-comment .full-width-content .review-content .item .info .childs {
+          margin-top: 20px;
+          border-left: 2px solid #a7a9ac;
+          padding-left: 20px; }
+          #section-comment .full-width-content .review-content .item .info .childs .item {
+            display: flex;
+            margin-bottom: 20px; }
+            #section-comment .full-width-content .review-content .item .info .childs .item .info {
+              padding-left: 20px;
+              flex-basis: 100%; }
+              #section-comment .full-width-content .review-content .item .info .childs .item .info p {
+                margin: 5px 0;
+                display: flex;
+                align-items: start; }
+                #section-comment .full-width-content .review-content .item .info .childs .item .info p i.icon-checked {
+                  background: #009981;
+                  display: block;
+                  margin: 0 5px 0 20px;
+                  width: 16px;
+                  height: 16px;
+                  text-align: center;
+                  line-height: 16px;
+                  font-size: 8px;
+                  border-radius: 20px;
+                  color: #fff; }
+                #section-comment .full-width-content .review-content .item .info .childs .item .info p span {
+                  color: #009981; }
+                #section-comment .full-width-content .review-content .item .info .childs .item .info p label i {
+                  color: #d4d4d4; }
+              #section-comment .full-width-content .review-content .item .info .childs .item .info .content {
+                margin-top: 15px;
+                text-align: justify;
+                line-height: 1.4; }
+        #section-comment .full-width-content .review-content .item .info:hover .childs .replyHolder {
+          display: flex !important; }
+    #section-comment .full-width-content .review-content .replyHolder {
+      display: none;
+      background: #e5e5e5 0% 0% no-repeat padding-box;
+      border-radius: 13px;
+      width: 320px;
+      display: flex;
+      padding: 0 10px; }
+      #section-comment .full-width-content .review-content .replyHolder input {
+        outline: none;
+        padding: 10px 0;
+        border: none;
+        background: none;
+        flex-basis: 100%;
+        font-weight: bold; }
+      #section-comment .full-width-content .review-content .replyHolder button {
+        border: none;
+        background: none;
+        color: #00483d;
+        width: 20px;
+        text-align: center; }
+  #section-comment .full-width-content ol.pagination {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    list-style: none;
+    margin: 40px 0 0 0;
+    padding: 0; }
+    #section-comment .full-width-content ol.pagination li {
+      padding: 5px; }
+      #section-comment .full-width-content ol.pagination li a {
+        display: block;
+        background: #fff 0% 0% no-repeat padding-box;
+        border: 1px solid #6d6e71;
+        border-radius: 25px;
+        height: 33px;
+        width: 33px;
+        line-height: 33px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 15px;
+        color: #6d6e71; }
+        #section-comment .full-width-content ol.pagination li a.active {
+          background: #00483d;
+          color: #fff; }
+
+#section-comment .heading {
+  display: flex; }
+  #section-comment .heading h3 {
+    margin: 15px 50px 40px 50px;
+    font-size: 20px;
+    color: #191919; }
+
+#section-comment .rc-form {
+  padding: 0 50px 0 20px; }
+  #section-comment .rc-form .row {
+    display: flex; }
+  #section-comment .rc-form .col {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    flex-basis: 100%; }
+  #section-comment .rc-form .col-end {
+    align-content: flex-end;
+    align-items: flex-end; }
+  #section-comment .rc-form .control {
+    display: flex;
+    flex-basis: 100%; }
+  #section-comment .rc-form input, #section-comment .rc-form textarea {
+    background: #e5e5e5 0% 0% no-repeat padding-box;
+    border-radius: 13px;
+    padding: 10px 12px;
+    outline: none;
+    flex-basis: 100%;
+    border: 1px solid #e5e5e5;
+    color: #555;
+    font-size: 13px;
+    text-align: justify; }
+  #section-comment .rc-form textarea {
+    min-height: 72px;
+    resize: vertical; }
+  #section-comment .rc-form button {
+    background: transparent linear-gradient(180deg, #008d77 0%, #00483d 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0 4px 6px #00000029;
+    border-radius: 13px;
+    width: 275px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    padding: 8px 10px; }
+    #section-comment .rc-form button i {
+      font-weight: normal;
+      text-transform: none; }
+
+#section-comment .review-form {
+  display: flex;
+  flex-direction: row; }
+
+#section-comment .comment-form {
+  flex-direction: column;
+  flex: 0 0 100%; }
+  #section-comment .comment-form .row {
+    align-items: stretch;
+    margin-right: -30px; }
+  #section-comment .comment-form .col {
+    padding-left: 0;
+    margin: 0 30px 20px 0; }
+  #section-comment .comment-form .note {
+    color: #00483d;
+    font-style: italic; }
+
 #section-check-order {
   margin-bottom: 3.6rem; }
 

@@ -634,6 +634,290 @@
         </div>
     </section>
 
+    <section id="section-comment">
+        <div class="container">
+        <div class="full-width-content">
+			<form onsubmit="return replyComment(this)" data-container=".comment-content" data-child="true">
+				<input name="__RequestVerificationToken" type="hidden" value="5sodnUJIVNxyea6lkW5bZPQI4UTAKdsqUHBMc6F7XwYyBykpio2GHSABiKdswvA6If_iHg1tbhGzFrBgpYklnRFeU5U1">
+				<input type="hidden" name="ModelID" value="1918">
+				<input type="hidden" name="SystemTypeID" value="3">
+				<div class="heading">
+					<h3>Bình luận về Nokia C21 Plus 2GB/64GB - Chính hãng</h3>
+				</div>
+				<div class="rc-form review-form">
+					<div class="rc-form comment-form">
+							<div class="row">
+								<div class="col">
+									<div class="control">
+										<input type="text" name="Title" placeholder="Họ tên *" data-required="1">
+									</div>
+								</div>
+								<div class="col">
+									<div class="control">
+										<input type="tel" name="Phone" placeholder="Điện thoại">
+									</div>
+								</div>
+								
+								<div class="col">
+									<div class="control">
+										<input type="email" name="Email" placeholder="Email">
+									</div>
+								</div>
+							</div>
+						<div class="row">
+							<div class="col">
+								<div class="control">
+									<textarea title="Nội dung" placeholder="Nội dung. Tối thiểu 15 ký tự *" name="Content" spellcheck="false" data-required="1" data-minlength="15" style="height: 52px; overflow-y: hidden;"></textarea>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col">
+								<p class="note">Để gửi bình luận, bạn cần nhập tối thiểu trường họ tên và nội dung</p>
+							</div>
+							<div class="col col-end">
+								<button type="submit"><i class="ph ph-paper-plane-right"></i> Gửi bình luận</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+
+			<div class="review-content comment-content" id="commentContent">
+                <input type="hidden" name="commentReq" value="{&quot;modelId&quot;:1918,&quot;systemTypeId&quot;:3,&quot;p&quot;:1,&quot;parent&quot;:0,&quot;child&quot;:true,&quot;path&quot;:&quot;/ajax/comment&quot;}">
+                <div id="replyCommentTemplate" style="display:none;">
+                    <form>
+                        <input name="__RequestVerificationToken" type="hidden" value="2XchFWLvlo-h0jXH2dE7WLrrpX-mnrp0Wn70IVxPuta1cskvjEro2Qetgrz3Ou7FCBOBiTBpVlxfUh71QRSmCC_C2MU1">
+                        <input type="hidden" name="SupportCommentID"><!-- parent ID-->
+                        <input type="hidden" name="ModelID" value="1918">
+                        <input type="hidden" name="SystemTypeID" value="3">
+                        <div class="rc-form comment-form">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="control">
+                                            <input type="text" name="Title" placeholder="Họ tên *" data-required="1">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="control">
+                                            <input type="tel" name="Phone" placeholder="Điện thoại">
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="control">
+                                            <input type="email" name="Email" placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="control">
+                                        <textarea title="Nội dung" placeholder="Nội dung. Tối thiểu 15 ký tự *" name="Content" spellcheck="false" data-required="1" data-minlength="15"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <p class="note">Để gửi bình luận, bạn cần nhập tối thiểu trường họ tên và nội dung</p>
+                                </div>
+                                <div class="col col-end">
+                                    <button type="submit">
+                                        <i class="ph ph-paper-plane-right"></i> Gửi bình luận
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="item">
+                    <div class="avt">
+                            <img src="https://hoanghamobile.com/Content/web/img/no-avt.png">
+                    </div>
+                    <div class="info">
+                        <p>
+                            <strong class="name">Hồ tấn Nghiệp</strong>
+                                        </p>
+                        <p><label><i>Hôm qua</i></label></p>
+                        <div class="content">
+                            Ở mỹ tho có cửa hàng ko
+                        </div>
+                            <div class="childs">
+                                <div class="comment-list">
+                                        <div class="item">
+                                            <div class="avt">
+                                                    <img src="./../img/logo.png">
+                                            </div>
+                                            <div class="info">
+                                                <p>
+                                                    <strong class="name">Lê Tuấn Lộc</strong>
+                                                    <i class="ph ph-check-circle icon-checked"></i> <span>QTV Hoàng Hà Mobile</span>
+                                                                                        </p>
+                                                <p><label><i>Hôm qua</i></label></p>
+                                                <div class="content">
+                                                    Chào anh/chị,<br>Hiện sản phẩm này bên em đang còn tại chi nhánh: <br> 80 Nam Kỳ Khởi Nghĩa, P1, TP. Mỹ Tho, Tiền Giang<br> 0794.37.88.99 <br>📌Anh/Chị vui lòng liên hệ với ☎HOTLINE Chi Nhánh hoặc 19002091 để đảm bảo tình trạng còn hàng sản phẩm trước khi qua mua hàng ạ!<br>Hoàng Hà Mobile hân hạnh phục vụ anh/chị!
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="replyHolder replyCommentHolder" style="display: none;">
+                                    <input type="text" placeholder="Nhập bình luận của bạn" data-id="651260">
+                                    <button><i class="ph ph-paper-plane-right"></i></button>
+                                </div>
+                                <div class="form-container">
+                                    <!--
+                                        WHEN INPUT IS FOCUS THEN ADD
+                <form onsubmit="return replyComment(this)" data-container=".comment-content" data-child="true">
+				<input name="__RequestVerificationToken" type="hidden" value="5sodnUJIVNxyea6lkW5bZPQI4UTAKdsqUHBMc6F7XwYyBykpio2GHSABiKdswvA6If_iHg1tbhGzFrBgpYklnRFeU5U1">
+				<input type="hidden" name="ModelID" value="1918">
+				<input type="hidden" name="SystemTypeID" value="3">
+				<div class="heading">
+					<h3>Bình luận về Nokia C21 Plus 2GB/64GB - Chính hãng</h3>
+				</div>
+				<div class="rc-form review-form">
+					<div class="rc-form comment-form">
+							<div class="row">
+								<div class="col">
+									<div class="control">
+										<input type="text" name="Title" placeholder="Họ tên *" data-required="1">
+									</div>
+								</div>
+								<div class="col">
+									<div class="control">
+										<input type="tel" name="Phone" placeholder="Điện thoại">
+									</div>
+								</div>
+								
+								<div class="col">
+									<div class="control">
+										<input type="email" name="Email" placeholder="Email">
+									</div>
+								</div>
+							</div>
+						<div class="row">
+							<div class="col">
+								<div class="control">
+									<textarea title="Nội dung" placeholder="Nội dung. Tối thiểu 15 ký tự *" name="Content" spellcheck="false" data-required="1" data-minlength="15" style="height: 52px; overflow-y: hidden;"></textarea>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col">
+								<p class="note">Để gửi bình luận, bạn cần nhập tối thiểu trường họ tên và nội dung</p>
+							</div>
+							<div class="col col-end">
+								<button type="submit"><i class="ph ph-paper-plane-right"></i> Gửi bình luận</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+                                    -->
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="avt">
+                            <img src="https://hoanghamobile.com/Content/web/img/no-avt.png">
+                    </div>
+                    <div class="info">
+                        <p>
+                            <strong class="name">THANH TUẤN</strong>
+                                        </p>
+                        <p><label><i>5 ngày trước</i></label></p>
+                        <div class="content">
+                            Ở Bến Tre có hàng không bạn nếu đặt mua thì có giao hàng toàn quốc không ạ?
+                        </div>
+                            <div class="childs">
+                                <div class="comment-list">
+                                        <div class="item">
+                                            <div class="avt">
+                                                    <img src="./../img/logo.png">
+                                            </div>
+                                            <div class="info">
+                                                <p>
+                                                    <strong class="name">Minh Châu</strong>
+                                                        <i class="icon-checked"></i> <span>QTV Hoàng Hà Mobile</span>
+                                                                                        </p>
+                                                <p><label><i>5 ngày trước</i></label></p>
+                                                <div class="content">
+                                                    Chào anh/chị,<br>Dạ rất tiếc hiện bên em chưa có chi nhánh tại khu vực Bến Tre, mong anh/chị thông cảm ạ.<br>Nếu anh/chị quan tâm sản phẩm, mình có thể tham khảo đặt hàng Online nhận tại nhà, bên em có hỗ trợ miễn phí vận chuyển toàn quốc (giao hàng từ kho Online), thanh toán khi mình nhận hàng ạ. Anh/Chị vui lòng nhấn nút “MUA NGAY” màu đỏ, sau khi đặt hàng sẽ có nhân viên bộ phận online liên hệ lại để xác nhận đơn hàng trong giờ hành chính và hỗ trợ anh/chị ạ.<br>Chia sẻ thông tin cùng anh/chị ạ.
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="replyHolder replyCommentHolder" style="display: none;">
+                                    <input type="text" placeholder="Nhập bình luận của bạn" data-id="650121">
+                                    <button><i class="icon-sending"></i></button>
+                                </div>
+                                <div class="form-container">
+                                    
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="avt">
+                            <img src="https://hoanghamobile.com/Content/web/img/no-avt.png">
+                    </div>
+                    <div class="info">
+                        <p>
+                            <strong class="name">Jack</strong>
+                                        </p>
+                        <p><label><i>Tuần trước (15/03/2023)</i></label></p>
+                        <div class="content">
+                            Có thu cũ đổi mới không bạn ?
+                        </div>
+                            <div class="childs">
+                                <div class="comment-list">
+                                        <div class="item">
+                                            <div class="avt">
+                                                    <img src="./../img/logo.png">
+                                            </div>
+                                            <div class="info">
+                                                <p>
+                                                    <strong class="name">Hoàng Thị Hồng Thúy</strong>
+                                                        <i class="icon-checked"></i> <span>QTV Hoàng Hà Mobile</span>
+                                                                                        </p>
+                                                <p><label><i>Tuần trước (16/03/2023)</i></label></p>
+                                                <div class="content">
+                                                    Chào anh/chị,<br>✨Hoàng Hà Mobile triển khai chương trình thu cũ đổi mới lên đời điện thoại Android và máy tính bảng nhằm hỗ trợ khách hàng mua máy mới với giá ưu đãi nhất.<br><br>GIÁ BÙ CHÊNH LỆCH (số tiền khách thanh toán) = GIÁ NIÊM YẾT - GIÁ NHẬP MÁY CŨ - TRỢ GIÁ THÊM (tuỳ từng sản phẩm)<br><br>📌Khách hàng vui lòng mang sản phẩm cũ tới các chi nhánh để kiểm tra và định giá sản phẩm.<br><br>👉Anh/chị tham khảo các sản phẩm được thu cũ cùng bảng giá thu lại máy tại:<br>https://hoanghamobile.com/tin-tuc/thu-cu-doi-moi-android<br>Thông tin đến anh/chị!
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="replyHolder replyCommentHolder" style="display: none;">
+                                    <input type="text" placeholder="Nhập bình luận của bạn" data-id="649690">
+                                    <button><i class="icon-sending"></i></button>
+                                </div>
+                                <div class="form-container">
+                                    
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <ol class="pagination">
+                    <li class="active"><a href="javascript:;" class="active">1</a></li>
+                <li><a href="">2</a></li>
+                </ol>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        replyCommentComment();
+                        $('.totalComments').text('12 ₫');
+                    });
+                </script>
+            </div>
+		</div>
+        </div>
+    </section>
+
     <section id="close-modal">
         <div class="jquery-modal blocker current"><div id="popup-modal" class="modal" style="width: 600px; padding: 0px; display: inline-block;">
 

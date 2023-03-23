@@ -503,3 +503,220 @@
         }
 
 }
+
+#section-comment{
+    .full-width-content {
+        background: #fff 0% 0% no-repeat padding-box;
+        box-shadow: 0 3px 6px #00000029;
+        border-radius: 14px;
+        padding: 20px 30px;
+        margin: 30px 0;
+        .review-content {
+            margin: 1.5rem 5rem 0 5rem;
+            .item {
+                display: flex;
+                margin-bottom: 2rem;
+                .avt {
+                    width: 6rem;
+                    height: 5.5rem;
+                    border: 1px solid #ccc;
+                    border-radius: 2.5rem;
+                    background: #f1f1f1;
+                    overflow: hidden;
+                    img{
+                        max-width: 100%;
+                    }
+                }
+                .info {
+                    font-size: 1.4rem;
+                    padding-left: 20px;
+                    flex-basis: 100%;
+                    p {
+                        margin: 5px 0;
+                        display: flex;
+                        align-items: start;
+                    }
+                    .content {
+                        margin-top: 15px;
+                        text-align: justify;
+                        line-height: 1.4;
+                    }
+                    .childs {
+                        margin-top: 20px;
+                        border-left: 2px solid #a7a9ac;
+                        padding-left: 20px;
+                        .item {
+                            display: flex;
+                            margin-bottom: 20px;
+                            .info {
+                                padding-left: 20px;
+                                flex-basis: 100%;
+                                p {
+                                    margin: 5px 0;
+                                    display: flex;
+                                    align-items: start;
+                                    i.icon-checked {
+                                        background: #009981;
+                                        display: block;
+                                        margin: 0 5px 0 20px;
+                                        width: 16px;
+                                        height: 16px;
+                                        text-align: center;
+                                        line-height: 16px;
+                                        font-size: 8px;
+                                        border-radius: 20px;
+                                        color: #fff;
+                                    }
+                                    span {
+                                        color: #009981;
+                                    }
+                                    label i {
+                                        color: #d4d4d4;
+                                    }
+                                }
+                                .content {
+                                    margin-top: 15px;
+                                    text-align: justify;
+                                    line-height: 1.4;
+                                }
+                            }
+                        }
+                    }
+                    &:hover .childs .replyHolder {
+                        display: flex !important;
+                    }
+                }
+            }
+            .replyHolder {
+                display: none;
+                background: #e5e5e5 0% 0% no-repeat padding-box;
+                border-radius: 13px;
+                width: 320px;
+                display: flex;
+                padding: 0 10px;
+                input {
+                    outline: none;
+                    padding: 10px 0;
+                    border: none;
+                    background: none;
+                    flex-basis: 100%;
+                    font-weight: bold;
+                }
+                button {
+                    border: none;
+                    background: none;
+                    color: #00483d;
+                    width: 20px;
+                    text-align: center;
+                }
+            }
+        }
+        ol.pagination {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            list-style: none;
+            margin: 40px 0 0 0;
+            padding: 0;
+            li {
+                padding: 5px;
+                a {
+                    display: block;
+                    background: #fff 0% 0% no-repeat padding-box;
+                    border: 1px solid #6d6e71;
+                    border-radius: 25px;
+                    height: 33px;
+                    width: 33px;
+                    line-height: 33px;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 15px;
+                    color: #6d6e71;
+                    &.active {
+                        background: #00483d;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .heading {
+        display: flex;
+        h3 {
+            margin: 15px 50px 40px 50px;
+            font-size: 20px;
+            color: #191919;
+        }
+    }
+    .rc-form {
+        padding: 0 50px 0 20px;
+        .row {
+            display: flex;
+        }
+        .col {
+            display: flex;
+            flex-direction: column;
+            padding-left: 30px;
+            flex-basis: 100%;
+        }
+        .col-end {
+            align-content: flex-end;
+            align-items: flex-end;
+        }
+        .control {
+            display: flex;
+            flex-basis: 100%;
+        }
+        input, textarea {
+            background: #e5e5e5 0% 0% no-repeat padding-box;
+            border-radius: 13px;
+            padding: 10px 12px;
+            outline: none;
+            flex-basis: 100%;
+            border: 1px solid #e5e5e5;
+            color: #555;
+            font-size: 13px;
+            text-align: justify;
+        }
+        textarea {
+            min-height: 72px;
+            resize: vertical;
+        }
+        button {
+            background: transparent linear-gradient(180deg,#008d77 0%,#00483d 100%) 0% 0% no-repeat padding-box;
+            box-shadow: 0 4px 6px #00000029;
+            border-radius: 13px;
+            width: 275px;
+            border: none;
+            outline: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #fff;
+            padding: 8px 10px;
+            i {
+                font-weight: normal;
+                text-transform: none;
+            }
+        }
+    }
+    .review-form {
+        display: flex;
+        flex-direction: row;
+    }
+    .comment-form {
+        flex-direction: column;
+        flex: 0 0 100%;
+        .row {
+            align-items: stretch;
+            margin-right: -30px;
+        }
+        .col {
+            padding-left: 0;
+            margin: 0 30px 20px 0;
+        }
+        .note {
+            color: #00483d;
+            font-style: italic;
+        }
+    }
+}
