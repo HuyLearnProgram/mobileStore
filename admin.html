@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Admin - Thế giới điện thoại</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+
+    <!-- Our files -->
+    <link rel="stylesheet" href="css/admin/style.css">
+    <link rel="stylesheet" href="css/admin/progress.css">
+    <!--Our js files-->
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="admin.html" title="logo">
+                <img src="../img/logo.png" title="logo image">
+            </a>
+        </div>
+        <h2>SmartPhone Store - Admin</h2>
+    </header>
+
+    <!-- Menu -->
+    <aside class="sidebar">
+        <ul class="nav">
+            <li class="nav-title">MENU</li>
+            <li class="nav-item"><a class="nav-link active"><i class="fa fa-home"></i> Trang Chủ</a></li>
+            <li class="nav-item"><a class="nav-link"><i class="fa fa-th-large"></i> Sản Phẩm</a></li>
+            <li class="nav-item"><a class="nav-link"><i class="fa fa-file-text-o"></i> Đơn Hàng</a></li>
+            <li class="nav-item"><a class="nav-link"><i class="fa fa-address-book-o"></i> Khách Hàng</a></li>
+            <li class="nav-item">
+                <hr>
+            </li>
+            <li class="nav-item">
+                <a href="index.html" class="nav-link" onclick="logOutAdmin(); return true;">
+                    <i class="fa fa-arrow-left"></i>
+                    Đăng xuất (về Trang chủ)
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Khung hiển thị chính -->
+    <div class="main">
+        <div class="home">
+            <div class="canvasContainer">
+                <canvas id="myChart1" height="290" class="chartjs-render-monitor" style="display: block; width: 581px; height: 290px; margin: 0 auto;" width="581"></canvas>
+            </div>
+
+            <div class="canvasContainer">
+                <canvas id="myChart2" height="290" class="chartjs-render-monitor" style="display: block; width: 581px; height: 290px; margin: 0 auto;" width="581"></canvas>
+            </div>
+        </div>
+
+        <!-- Sản Phẩm -->
+        <div class="sanpham">
+            <table class="table-header">
+                <tr>
+                    <!-- Theo độ rộng của table content -->
+                    <th title="Sắp xếp" style="width: 5%" onclick="sortProductsTable('stt')">Stt <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 10%" onclick="sortProductsTable('masp')">Mã <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 40%" onclick="sortProductsTable('ten')">Tên <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 15%" onclick="sortProductsTable('gia')">Giá <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 15%" onclick="sortProductsTable('khuyenmai')">Khuyến mãi <i class="fa fa-sort"></i></th>
+                    <th style="width: 15%">Hành động</th>
+                </tr>
+            </table>
+
+            <div class="table-content">
+                <table class="table-outline hideImg">
+                    <tbody>
+                        <tr>
+                        <td style="width: 5%">1</td>
+                        <td style="width: 10%">Sam0</td>
+                        <td style="width: 40%">
+                            <a title="Xem chi tiết" target="_blank" href="chitietsanpham.html?SamSung-Galaxy-J4+">SamSung Galaxy J4+</a>
+                        </td>
+                        <td style="width: 15%">3.490.000</td>
+                        <td style="width: 15%">Góp 0%</td>
+                        <td style="width: 15%">
+                            <div class="tooltip">
+                                <i class="fa fa-wrench" onclick="addKhungSuaSanPham('Sam0')"></i>
+                                <span class="tooltiptext">Sửa</span>
+                            </div>
+                            <div class="tooltip">
+                                <i class="fa fa-trash" onclick="xoaSanPham('Sam0', 'SamSung Galaxy J4+')"></i>
+                                <span class="tooltiptext">Xóa</span>
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 5%">2</td>
+                            <td style="width: 10%">Xia0</td>
+                            <td style="width: 40%">
+                                <a title="Xem chi tiết" target="_blank" href="chitietsanpham.html?Xiaomi-Mi-8-Lite">Xiaomi Mi 8 Lite</a>
+                            </td>
+                            <td style="width: 15%">6.690.000</td>
+                            <td style="width: 15%">Góp 0%</td>
+                            <td style="width: 15%">
+                                <div class="tooltip">
+                                    <i class="fa fa-wrench" onclick="addKhungSuaSanPham('Xia0')"></i>
+                                    <span class="tooltiptext">Sửa</span>
+                                </div>
+                                <div class="tooltip">
+                                    <i class="fa fa-trash" onclick="xoaSanPham('Xia0', 'Xiaomi Mi 8 Lite')"></i>
+                                    <span class="tooltiptext">Xóa</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-footer">
+                <select name="kieuTimSanPham">
+                    <option value="ma">Tìm theo mã</option>
+                    <option value="ten">Tìm theo tên</option>
+                </select>
+                <input type="text" placeholder="Tìm kiếm..." onkeyup="timKiemSanPham(this)">
+                <button onclick="document.getElementById('khungThemSanPham').style.transform = 'scale(1)'; autoMaSanPham()">
+                    <i class="fa fa-plus-square"></i>
+                    Thêm sản phẩm
+                </button>
+            </div>
+
+            <div id="khungThemSanPham" class="overlay">
+                <span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">&times;</span>
+                <table class="overlayTable table-outline table-content table-header">
+                    <tr>
+                        <th colspan="2">Thêm Sản Phẩm</th>
+                    </tr>
+                    <tr>
+                        <td>Mã sản phẩm:</td>
+                        <td><input type="text" id="maspThem"></td>
+                    </tr>
+                    <tr>
+                        <td>Tên sản phẩm:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Hãng:</td>
+                        <td>
+                            <select name="chonCompany" onchange="autoMaSanPham(this.value)">
+                                <script>
+                                    var company = ["Apple", "Samsung", "Oppo", "Nokia", "Huawei", "Xiaomi","Realme", "Vivo", "Philips", "Mobell", "Mobiistar", "Itel","Coolpad", "HTC", "Motorola"];
+                                    for(var c of company) {
+                                        document.writeln(`<option value="`+c+`">`+c+`</option>`);
+                                    }
+                                </script>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hình:</td>
+                        <td>
+                            <img class="hinhDaiDien" id="anhDaiDienSanPhamThem" src="">
+                            <input type="file" accept="image/*" onchange="capNhatAnhSanPham(this.files, 'anhDaiDienSanPhamThem')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Giá tiền:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Số sao (số nguyên 0->5):</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Đánh giá (số nguyên):</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Khuyến mãi:</td>
+                        <td>
+                            <select>
+                                <option value="">Không</option>
+                                <option value="tragop">Trả góp</option>
+                                <option value="giamgia">Giảm giá</option>
+                                <option value="giareonline">Giá rẻ online</option>
+                                <option value="moiramat">Mới ra mắt</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Giá trị khuyến mãi:</td>
+                        <td><input type="text" placeholder=""></td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Thông số kĩ thuật</th>
+                    </tr>
+                    <tr>
+                        <td>Màn hình:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Hệ điều hành:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Camara sau:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Camara trước:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>CPU:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>RAM:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Bộ nhớ trong:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Thẻ nhớ:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Dung lượng Pin:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="table-footer"> <button onclick="themSanPham()">THÊM</button> </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="khungSuaSanPham" class="overlay" style="transform: scale(0);">
+                <span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">×</span>
+                <table class="overlayTable table-outline table-content table-header">
+                    <tbody>
+                    <tr>
+                        <th colspan="2">SamSung Galaxy J4+</th>
+                    </tr>
+                    <tr>
+                        <td>Mã sản phẩm:</td>
+                        <td><input type="text" value="Sam0"></td>
+                    </tr>
+                    <tr>
+                        <td>Tên sẩn phẩm:</td>
+                        <td><input type="text" value="SamSung Galaxy J4+"></td>
+                    </tr>
+                    <tr>
+                        <td>Hãng:</td>
+                        <td>
+                            <select><option value="Apple">Apple</option><option value="Samsung" selected="">Samsung</option><option value="Oppo">Oppo</option><option value="Nokia">Nokia</option><option value="Huawei">Huawei</option><option value="Xiaomi">Xiaomi</option><option value="Realme">Realme</option><option value="Vivo">Vivo</option><option value="Philips">Philips</option><option value="Mobell">Mobell</option><option value="Mobiistar">Mobiistar</option><option value="Itel">Itel</option><option value="Coolpad">Coolpad</option><option value="HTC">HTC</option><option value="Motorola">Motorola</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hình:</td>
+                        <td>
+                            <img class="hinhDaiDien" id="anhDaiDienSanPhamSua" src="">
+                            <input type="file" accept="image/*" onchange="capNhatAnhSanPham(this.files, 'anhDaiDienSanPhamSua')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Giá tiền (số nguyên):</td>
+                        <td><input type="text" value="3490000"></td>
+                    </tr>
+                    <tr>
+                        <td>Số sao (số nguyên 0-&gt;5):</td>
+                        <td><input type="text" value="3"></td>
+                    </tr>
+                    <tr>
+                        <td>Đánh giá (số nguyên):</td>
+                        <td><input type="text" value="26"></td>
+                    </tr>
+                    <tr>
+                        <td>Khuyến mãi:</td>
+                        <td>
+                            <select>
+                                <option value="">Không</option>
+                                <option value="tragop" selected="">Trả góp</option>
+                                <option value="giamgia">Giảm giá</option>
+                                <option value="giareonline">Giá rẻ online</option>
+                                <option value="moiramat">Mới ra mắt</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Giá trị khuyến mãi:</td>
+                        <td><input type="text" value="0"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Thông số kĩ thuật</th>
+                    </tr>
+                    <tr>
+                        <td>Màn hình:</td>
+                        <td><input type="text" value="IPS LCD, 6.0', HD+"></td>
+                    </tr>
+                    <tr>
+                        <td>Hệ điều hành:</td>
+                        <td><input type="text" value="Android 8.1 (Oreo)"></td>
+                    </tr>
+                    <tr>
+                        <td>Camara sau:</td>
+                        <td><input type="text" value="13 MP"></td>
+                    </tr>
+                    <tr>
+                        <td>Camara trước:</td>
+                        <td><input type="text" value="5 MP"></td>
+                    </tr>
+                    <tr>
+                        <td>CPU:</td>
+                        <td><input type="text" value="Qualcomm Snapdragon 425 4 nhân 64-bit"></td>
+                    </tr>
+                    <tr>
+                        <td>RAM:</td>
+                        <td><input type="text" value="2 GB"></td>
+                    </tr>
+                    <tr>
+                        <td>Bộ nhớ trong:</td>
+                        <td><input type="text" value="16 GB"></td>
+                    </tr>
+                    <tr>
+                        <td>Thẻ nhớ:</td>
+                        <td><input type="text" value="MicroSD, hỗ trợ tối đa 256 GB"></td>
+                    </tr>
+                    <tr>
+                        <td>Dung lượng Pin:</td>
+                        <td><input type="text" value="3300 mAh"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="table-footer"> <button onclick="suaSanPham('Sam0')">SỬA</button> </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> <!-- // sanpham -->
+
+
+        <!-- Đơn Hàng -->
+        <div class="donhang">
+            <table class="table-header">
+                <tr>
+                    <!-- Theo độ rộng của table content -->
+                    <th title="Sắp xếp" style="width: 5%" onclick="sortDonHangTable('stt')">Stt <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 13%" onclick="sortDonHangTable('madon')">Mã đơn <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 7%" onclick="sortDonHangTable('khach')">Khách <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 20%" onclick="sortDonHangTable('sanpham')">Sản phẩm <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 15%" onclick="sortDonHangTable('tongtien')">Tổng tiền <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 10%" onclick="sortDonHangTable('ngaygio')">Ngày giờ <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 10%" onclick="sortDonHangTable('trangthai')">Trạng thái <i class="fa fa-sort"></i></th>
+                    <th style="width: 10%">Hành động</th>
+                </tr>
+            </table>
+
+            <div class="table-content">
+                <table class="table-outline hideImg">
+                    <tbody>
+                        <tr>
+                        <td style="width: 5%">1</td>
+                        <td style="width: 13%">2023-04-03T17:50:28.759Z</td>
+                        <td style="width: 7%">VuGiaHuy</td>
+                        <td style="width: 20%"><p style="text-align: right">Huawei Nova 2i [1]</p></td>
+                        <td style="width: 15%">3.990.000</td>
+                        <td style="width: 10%">4/4/2023, 12:50:28 AM</td>
+                        <td style="width: 10%">Đang chờ xử lý</td>
+                        <td style="width: 10%">
+                            <div class="tooltip">
+                                <i class="fa fa-check" onclick="duyet('2023-04-03T17:50:28.759Z', true)"></i>
+                                <span class="tooltiptext">Duyệt</span>
+                            </div>
+                            <div class="tooltip">
+                                <i class="fa fa-remove" onclick="duyet('2023-04-03T17:50:28.759Z', false)"></i>
+                                <span class="tooltiptext">Hủy</span>
+                            </div>
+                            
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-footer">
+                <div class="timTheoNgay">
+                    Từ ngày: <input type="date" id="fromDate">
+                    Đến ngày: <input type="date" id="toDate">
+
+                    <button onclick="locDonHangTheoKhoangNgay()"><i class="fa fa-search"></i> Tìm</button>
+                </div>
+
+                <select name="kieuTimDonHang">
+                    <option value="ma">Tìm theo mã đơn</option>
+                    <option value="khachhang">Tìm theo tên khách hàng</option>
+                    <option value="trangThai">Tìm theo trạng thái</option>
+                </select>
+                <input type="text" placeholder="Tìm kiếm..." onkeyup="timKiemDonHang(this)">
+            </div>
+
+        </div> <!-- // don hang -->
+
+
+        <!-- Khách hàng -->
+        <div class="khachhang">
+            <table class="table-header">
+                <tr>
+                    <!-- Theo độ rộng của table content -->
+                    <th title="Sắp xếp" style="width: 5%" onclick="sortKhachHangTable('stt')">Stt <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 15%" onclick="sortKhachHangTable('hoten')">Họ tên <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 20%" onclick="sortKhachHangTable('email')">Email <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 20%" onclick="sortKhachHangTable('taikhoan')">Tài khoản <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 10%" onclick="sortKhachHangTable('matkhau')">Mật khẩu <i class="fa fa-sort"></i></th>
+                    <th style="width: 10%">Hành động</th>
+                </tr>
+            </table>
+
+            <div class="table-content">
+                <table class="table-outline hideImg">
+                    <tbody>
+                    <tr>
+                    <td style="width: 5%">1</td>
+                    <td style="width: 15%">Vu Huy</td>
+                    <td style="width: 20%">huygiavu2003@gmail.com</td>
+                    <td style="width: 20%">VuGiaHuy</td>
+                    <td style="width: 10%">123</td>
+                    <td style="width: 10%">
+                        <div class="tooltip">
+                            <label class="switch">
+                                <input type="checkbox" checked="" onclick="voHieuHoaNguoiDung(this, 'VuGiaHuy')">
+                                <span class="slider round"></span>
+                            </label>
+                            <span class="tooltiptext">Khóa</span>
+                        </div>
+                        <div class="tooltip">
+                            <i class="fa fa-remove" onclick="xoaNguoiDung('VuGiaHuy')"></i>
+                            <span class="tooltiptext">Xóa</span>
+                        </div>
+                    </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-footer">
+                <select name="kieuTimKhachHang">
+                    <option value="ten">Tìm theo họ tên</option>
+                    <option value="email">Tìm theo email</option>
+                    <option value="taikhoan">Tìm theo tài khoản</option>
+                </select>
+                <input type="text" placeholder="Tìm kiếm..." onkeyup="timKiemNguoiDung(this)">
+                <button onclick="openThemNguoiDung()"><i class="fa fa-plus-square"></i> Thêm người dùng</button>
+            </div>
+        </div> <!-- // khach hang -->
+    </div> <!-- // main -->
+
+
+    <footer>
+
+    </footer>
+    <script src="src/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="src/chart.js"></script>
+</body>
+
+</html>
