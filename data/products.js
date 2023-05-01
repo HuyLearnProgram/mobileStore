@@ -14,6 +14,7 @@ let listProducts = [
         battery: "5000 mAh, sạc 15W",
       },
       img: "https://cdn.tgdd.vn/Products/Images/42/273459/tcl-30-se-xanh-dam-1.jpg",
+      masp: 1,
       class: "Giá rẻ",
     },
     {
@@ -32,6 +33,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/290878/Realme-c30s-den-temp-600x600.jpg",
+      masp: 2,
       class: "Giá rẻ",
     },
     {
@@ -50,6 +52,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/285032/vivo-y02s-thumb-1-2-600x600.jpg",
+      masp: 3,
       class: "Giá rẻ",
     },
     {
@@ -68,6 +71,7 @@ let listProducts = [
       },
       rate: 2,
       img: "https://cdn.tgdd.vn/Products/Images/42/303163/xiaomi-redmi-12c-blue-thumb-600x600.jpg",
+      masp: 4,
       class: "Giá rẻ",
     },
     {
@@ -86,6 +90,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/249944/oppo-a55-4g-thumb-new-600x600.jpg",
+      masp: 5,
       class: "Giá rẻ",
     },
     {
@@ -104,6 +109,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/251216/Xiaomi-11T-Blue-600x600.jpg",
+      masp: 6,
       class: "Giá rẻ",
     },
     {
@@ -122,6 +128,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/285223/vivo-y16-vang-thumb-600x600.jpg",
+      masp: 7,
       class: "Tầm trung",
     },
     {
@@ -140,6 +147,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/245261/Xiaomi-redmi-note-11-black-600x600.jpeg",
+      masp: 8,
       class: "Tầm trung",
     },
     {
@@ -158,6 +166,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/274359/samsung-galaxy-a23-den-thumb-600x600.jpg",
+      masp: 9,
       class: "Tầm trung",
     },
     {
@@ -176,6 +185,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/286697/vivo-y35-thumb-den-600x600.jpg",
+      masp: 10,
       class: "Tầm trung",
     },
     {
@@ -194,6 +204,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/292672/realme-10-thumb-1-600x600.jpg",
+      masp: 11,
       class: "Tầm trung",
     },
     {
@@ -212,6 +223,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/282901/oppo-reno8-z-5g-vang-thumb-2-600x600.jpg",
+      masp: 12,
       class: "Tầm trung",
     },
     {
@@ -230,6 +242,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/283828/vivo-v25e-vang-thumb-1-2-600x600.jpg",
+      masp: 13,
       class: "Tầm trung",
     },
     {
@@ -248,6 +261,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/251216/Xiaomi-11T-Blue-600x600.jpg",
+      masp: 14,
       class: "Cận cao cấp",
     },
     {
@@ -265,6 +279,7 @@ let listProducts = [
         battery: "4500 mAh, sạc 25W",
       },
       img: "https://cdn.tgdd.vn/Products/Images/42/224859/samsung-galaxy-s20-fan-edition-xanh-la-thumbnew-600x600.jpeg",
+      masp: 15,
       class: "Cận cao cấp",
     },
     {
@@ -283,6 +298,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/301641/oppo-reno8t-den1-thumb-600x600.jpg",
+      masp: 16,
       class: "Cận cao cấp",
     },
     {
@@ -301,6 +317,7 @@ let listProducts = [
       },
       rate: 4.3,
       img: "https://cdn.tgdd.vn/Products/Images/42/283148/vivo-v25-5g-vang-thumb-1-1-600x600.jpg",
+      masp: 17,
       class: "Cận cao cấp",
     },
     {
@@ -319,6 +336,7 @@ let listProducts = [
       },
       rate: 3,
       img: "https://cdn.tgdd.vn/Products/Images/42/301642/oppo-reno8t-vang1-thumb-600x600.jpg",
+      masp: 18,
       class: "Cận cao cấp",
     },
     {
@@ -337,6 +355,7 @@ let listProducts = [
       },
       rate: 3,
       img: "https://cdn.tgdd.vn/Products/Images/42/267211/Samsung-Galaxy-S21-FE-vang-1-2-600x600.jpg",
+      masp: 19,
       class: "Cận cao cấp",
     },
     {
@@ -355,6 +374,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/246195/samsung-galaxy-a73-5g-xanh-thumb-600x600.jpg",
+      masp: 20,
       class: "Cận cao cấp",
     },
     {
@@ -373,6 +393,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/291623/xiaomi-12t-thumb-600x600.jpg",
+      masp: 21,
       class: "Cận cao cấp",
     },
     {
@@ -391,6 +412,7 @@ let listProducts = [
       },
       rate: 4.5,
       img: "https://cdn.tgdd.vn/Products/Images/42/236187/oppo-reno6-pro-grey-600x600.jpg",
+      masp: 22,
       class: "Cao cấp",
     },
     {
@@ -409,6 +431,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2023/04/w300/realme-gt-neo-5-se-5g-xanh.jpg.webp",
+      masp: 23,
       class: "Tầm trung",
     },
     {
@@ -427,6 +450,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/242439/Galaxy-S22-Plus-White-600x600.jpg",
+      masp: 24,
       class: "Cao cấp",
     },
     {
@@ -445,6 +469,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/260546/oppo-reno8-pro-thumb-xanh-1-600x600.jpg",
+      masp: 25,
       class: "Cao cấp",
     },
     {
@@ -463,6 +488,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-600x600.jpg",
+      masp: 26,
       class: "Cao cấp",
     },
     {
@@ -481,6 +507,7 @@ let listProducts = [
       },
       rate: 4.5,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2023/04/w300/asus-rog-phone-7-den.jpg.webp",
+      masp: 27,
       class: "Cao cấp",
     },
     {
@@ -499,6 +526,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/258047/samsung-galaxy-z-flip4-5g-128gb-thumb-tim-600x600.jpg",
+      masp: 28,
       class: "Cao cấp",
     },
     {
@@ -517,6 +545,7 @@ let listProducts = [
       },
       rate: 3,
       img: "https://cdn.tgdd.vn/Products/Images/42/267984/xiaomi-13-thumb-den-600x600.jpg",
+      masp: 29,
       class: "Cao cấp",
     },
     {
@@ -535,6 +564,7 @@ let listProducts = [
       },
       rate: 4.5,
       img: "https://cdn.tgdd.vn/Products/Images/42/285031/samsung-galaxy-z-fold-4-512gb-xanh-1.jpg",
+      masp: 30,
       class: "Cao cấp",
     },
     {
@@ -553,6 +583,7 @@ let listProducts = [
       },
       rate: 4.5,
       img: "https://cdn.tgdd.vn/Products/Images/42/301795/samsung-galaxy-s23-2-600x600.jpg",
+      masp: 31,
       class: "Cao cấp",
     },
     {
@@ -571,6 +602,7 @@ let listProducts = [
       },
       rate: 3.7,
       img: "https://cdn.tgdd.vn/Products/Images/42/250622/oppo-find-x5-pro-den-thumb-600x600.jpg",
+      masp: 32,
       class: "Cao cấp",
     },
     {
@@ -589,6 +621,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/302531/xiaomi-13-xanh-1.jpg",
+      masp: 33,
       class: "Cận cao cấp",
     },
     {
@@ -607,6 +640,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/271697/Galaxy-S22-Ultra-Green-600x600.jpg",
+      masp: 34,
       class: "Cao cấp",
     },
     {
@@ -625,6 +659,7 @@ let listProducts = [
       },
       rate: 5,
       img: "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-1-600x600.jpg",
+      masp: 35,
       class: "Cao cấp",
     },
     {
@@ -643,6 +678,7 @@ let listProducts = [
       },
       rate: 4.7,
       img: "https://cdn.tgdd.vn/Products/Images/42/282903/xiaomi-13-pro-den-thumb-600x600.jpg",
+      masp: 36,
       class: "Cao cấp",
     },
     {
@@ -661,6 +697,7 @@ let listProducts = [
       },
       rate: 4.5,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2022/12/w300/realme-10-pro-plus-anh-sao-1.jpg.webp",
+      masp: 37,
       class: "Tầm trung",
     },
     {
@@ -679,6 +716,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/226935/samsung-galaxy-z-fold-3-silver-1-600x600.jpg",
+      masp: 38,
       class: "Cao cấp",
     },
     {
@@ -696,6 +734,7 @@ let listProducts = [
         battery: "5000 mAh, sạc 67W",
       },
       img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2023/03/w300/xiaomi-redmi-note-12-turbo-edition-trang.jpg.webp",
+      masp: 39,
       class: "Tầm trung",
     },
     {
@@ -714,6 +753,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-poco-x5-pro-5g-1.jpg",
+      masp: 40,
       class: "Tầm trung",
     },
     {
@@ -732,6 +772,7 @@ let listProducts = [
       },
       rate: 4.5,
       img: "https://cdn.tgdd.vn/Products/Images/42/250625/samsung-galaxy-z-fold4-kem-256gb-600x600.jpg",
+      masp: 41,
       class: "Cao cấp",
     },
     {
@@ -750,6 +791,7 @@ let listProducts = [
       },
       rate: 5,
       img: "https://cdn.tgdd.vn/Products/Images/42/261888/realme-c35-1-1.jpg",
+      masp: 42,
       class: "Giá rẻ",
     },
     {
@@ -768,6 +810,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/265311/masstel-izi-10-4g-xanh-thumb-600x600.jpg",
+      masp: 43,
       class: "Cơ bản",
     },
     {
@@ -786,6 +829,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/284122/mobell-m239-do-thumb-1-600x600.jpg",
+      masp: 44,
       class: "Cơ bản",
     },
     {
@@ -804,6 +848,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/264120/masstel-izi-55-gold-600x600.jpg",
+      masp: 45,
       class: "Cơ bản",
     },
     {
@@ -822,6 +867,7 @@ let listProducts = [
       },
       rate: 3.5,
       img: "https://cdn.tgdd.vn/Products/Images/42/279401/itel-it9010-thumb-1-2-600x600.jpg",
+      masp: 46,
       class: "Cơ bản",
     },
     {
@@ -840,6 +886,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/299610/masstel-izi-26-4g-thum-600x600.jpg",
+      masp: 47,
       class: "Cơ bản",
     },
     {
@@ -858,6 +905,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/274016/Masstel-FAMI-12-4G-vang-thumb-600x600.jpg",
+      masp: 48,
       class: "Cơ bản",
     },
     {
@@ -876,6 +924,7 @@ let listProducts = [
       },
       rate: 5,
       img: "https://cdn.tgdd.vn/Products/Images/42/299611/masstel-lux-10-vang-thumb-600x600.jpg",
+      masp: 49,
       class: "Cơ bản",
     },
     {
@@ -894,6 +943,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/299998/mobell-f209-den-thumb-600x600.jpg",
+      masp: 50,
       class: "Cơ bản",
     },
     {
@@ -912,6 +962,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/260146/itel-it9210-black-1-600x600.jpg",
+      masp: 51,
       class: "Cơ bản",
     },
     {
@@ -930,6 +981,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/288630/mobell-m539-do-thumb-600x600.jpg",
+      masp: 52,
       class: "Cơ bản",
     },
     {
@@ -948,6 +1000,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/264121/masstel-fami-60-thumb-600x600.jpeg",
+      masp: 53,
       class: "Cơ bản",
     },
     {
@@ -966,6 +1019,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/240194/nokia-105-4g-blue-600x600.jpg",
+      masp: 54,
       class: "Cơ bản",
     },
     {
@@ -984,6 +1038,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/285027/masstel-lux-20-xanh-thumb-600x600.jpeg",
+      masp: 55,
       class: "Cơ bản",
     },
     {
@@ -1002,6 +1057,7 @@ let listProducts = [
       },
       rate: 5,
       img: "https://cdn.tgdd.vn/Products/Images/42/288631/mobell-rock-4-xanh-duong-thumb-600x600.jpg",
+      masp: 56,
       class: "Cơ bản",
     },
     {
@@ -1020,6 +1076,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/240196/nokia-110-4g-blue-600x600.jpg",
+      masp: 57,
       class: "Cơ bản",
     },
     {
@@ -1038,6 +1095,7 @@ let listProducts = [
       },
       rate: 3,
       img: "https://cdn.tgdd.vn/Products/Images/42/228366/nokia-215-xanh-ngoc-new-600x600-600x600.jpg",
+      masp: 58,
       class: "Cơ bản",
     },
     {
@@ -1056,6 +1114,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/286060/Nokia%208210-trang-thumb-600x600.jpg",
+      masp: 59,
       class: "Giá rẻ",
     },
     {
@@ -1074,6 +1133,7 @@ let listProducts = [
       },
       rate: 3.5,
       img: "https://cdn.tgdd.vn/Products/Images/42/286133/nokia-5710-thumb-den-1-600x600.jpg",
+      masp: 60,
       class: "Giá rẻ",
     },
     {
@@ -1092,6 +1152,7 @@ let listProducts = [
       },
       rate: 5,
       img: "https://cdn.tgdd.vn/Products/Images/42/149456/iphone-se-2020-do-1-1-org.jpg",
+      masp: 61,
       class: "Tầm trung",
     },
     {
@@ -1110,6 +1171,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-trang-600x600.jpg",
+      masp: 62,
       class: "Cận cao cấp",
     },
     {
@@ -1128,6 +1190,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/274158/iphone-se-white-600x600.jpg",
+      masp: 63,
       class: "Cận cao cấp",
     },
     {
@@ -1146,6 +1209,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/i/p/iphone-11-pro-space-select-2019_1_2_1_2.png",
+      masp: 64,
       class: "Cao cấp",
     },
     {
@@ -1164,6 +1228,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.tgdd.vn/Products/Images/42/228737/iphone-12-do-new-600x600-600x600.jpg",
+      masp: 65,
       class: "Cao cấp",
     },
     {
@@ -1182,6 +1247,7 @@ let listProducts = [
       },
       rate: 4.5,
       img: "https://cdn.tgdd.vn/Products/Images/42/250258/iphone-13-blue-1-600x600.jpg",
+      masp: 66,
       class: "Cao cấp",
     },
     {
@@ -1200,6 +1266,7 @@ let listProducts = [
       },
       rate: 5,
       img: "https://cdn.tgdd.vn/Products/Images/42/240259/iPhone-14-thumb-do-600x600.jpg",
+      masp: 67,
       class: "Cao cấp",
     },
     {
@@ -1218,6 +1285,7 @@ let listProducts = [
       },
       rate: 4.5,
       img: "https://cdn.tgdd.vn/Products/Images/42/245545/iPhone-14-plus-thumb-den-600x600.jpg",
+      masp: 68,
       class: "Cao cấp",
     },
     {
@@ -1236,6 +1304,7 @@ let listProducts = [
       },
       rate: 4.5,
       img: "https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-tim-thumb-600x600.jpg",
+      masp: 69,
       class: "Cao cấp",
     },
     {
@@ -1254,6 +1323,7 @@ let listProducts = [
       },
       rate: 5,
       img: "https://cdn.tgdd.vn/Products/Images/42/250726/iphone-13-pro-graphite-600x600.jpg",
+      masp: 70,
       class: "Cao cấp",
     },
     {
@@ -1272,6 +1342,7 @@ let listProducts = [
       },
       rate: 5,
       img: "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-vang-thumb-600x600.jpg",
+      masp: 71,
       class: "Cao cấp",
     },
     {
@@ -1290,6 +1361,7 @@ let listProducts = [
       },
       rate: 5,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/s/m/sm-a546_galaxy_a54_5g_awesome_violet_front.png",
+      masp: 72,
       class: "Cận cao cấp",
     },
     {
@@ -1308,6 +1380,7 @@ let listProducts = [
       },
       rate: 4.3,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/s/m/sm-a346_galaxy_a34_5g_awesome_silver_front_2.png",
+      masp: 73,
       class: "Cận cao cấp",
     },
     {
@@ -1326,6 +1399,7 @@ let listProducts = [
       },
       rate: 4.5,
       img: "https://cdn2.cellphones.com.vn/58x58,webp,q100/media/catalog/product/t/_/t_i_xu_ng_2__3_6.png",
+      masp: 74,
       class: "Giá rẻ",
     },
     {
@@ -1344,6 +1418,7 @@ let listProducts = [
       },
       rate: 4.5,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/1/_/1_250.jpg",
+      masp: 75,
       class: "Giá rẻ",
     },
     {
@@ -1362,6 +1437,7 @@ let listProducts = [
       },
       rate: 4.8,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/p/m/pms_1655902420.18254534_1.png",
+      masp: 76,
       class: "Tầm trung",
     },
     {
@@ -1380,6 +1456,7 @@ let listProducts = [
       },
       rate: 5,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/r/e/real_me_pro_002.jpg",
+      masp: 77,
       class: "Tầm trung",
     },
     {
@@ -1398,6 +1475,7 @@ let listProducts = [
       },
       rate: 5,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/r/g/rgrgrtyt6.jpg",
+      masp: 78,
       class: "Tầm trung",
     },
     {
@@ -1416,6 +1494,7 @@ let listProducts = [
       },
       rate: 5,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/f/v/fvssxa.jpg",
+      masp: 79,
       class: "Giá rẻ",
     },
     {
@@ -1434,6 +1513,7 @@ let listProducts = [
       },
       rate: 4.7,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/o/n/oneplus_11_-_green_-_rgb.jpg",
+      masp: 80,
       class: "Cao cấp",
     },
     {
@@ -1452,6 +1532,7 @@ let listProducts = [
       },
       rate: 4.6,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/a/p/apple-iphone-xr-64-gb-chinh-hang-vn_3_.jpg",
+      masp: 81,
       class: "Cận cao cấp",
     },
     {
@@ -1470,6 +1551,7 @@ let listProducts = [
       },
       rate: 4.6,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/p/m/pms_1650393946.86423132.png",
+      masp: 82,
       class: "Giá rẻ",
     },
     {
@@ -1488,6 +1570,7 @@ let listProducts = [
       },
       rate: 4.3,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/2/2/22_14.jpg",
+      masp: 83,
       class: "Tầm trung",
     },
     {
@@ -1506,6 +1589,7 @@ let listProducts = [
       },
       rate: 4.8,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/z/t/zte-nubia-red-magic-6r-.jpg",
+      masp: 84,
       class: "Cận cao cấp",
     },
     {
@@ -1524,6 +1608,7 @@ let listProducts = [
       },
       rate: 5,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/p/o/pova3--hei.png",
+      masp: 85,
       class: "Tầm trung",
     },
     {
@@ -1542,6 +1627,7 @@ let listProducts = [
       },
       rate: 4.1,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/t/e/tecno-pova-2-3.jpg",
+      masp: 86,
       class: "Giá rẻ",
     },
     {
@@ -1560,6 +1646,7 @@ let listProducts = [
       },
       rate: 4.2,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/o/n/oneplus-8t-600x600-1-200x200.jpg",
+      masp: 87,
       class: "Cận cao cấp",
     },
     {
@@ -1578,6 +1665,7 @@ let listProducts = [
       },
       rate: 4.7,
       img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/6/1/61c76810-d69e-4f77-bfc3-15e1a914a4bb.png",
+      masp: 88,
       class: "Tầm trung",
     },
     {
@@ -1596,6 +1684,7 @@ let listProducts = [
       },
       rate: 4,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/imgs/2022/10/w250/xiaomi-redmi-note-12-xanh.png.webp",
+      masp: 89,
       class: "Giá rẻ",
     },
     {
@@ -1614,6 +1703,7 @@ let listProducts = [
       },
       rate: 4.3,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/imgs/2022/03/w250/xiaomi-redmi-10-5g-xanh.jpg.webp",
+      masp: 90,
       class: "Giá rẻ",
     },
     {
@@ -1632,6 +1722,7 @@ let listProducts = [
       },
       rate: 4.7,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/imgs/2022/04/w250/realme-q5-trang.jpg.webp",
+      masp: 91,
       class: "Giá rẻ",
     },
     {
@@ -1650,6 +1741,7 @@ let listProducts = [
       },
       rate: 4.7,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/imgs/2022/04/w250/realme-q5-pro-vang.png.webp",
+      masp: 92,
       class: "Tầm trung",
     },
     {
@@ -1668,6 +1760,7 @@ let listProducts = [
       },
       rate: 4.5,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/imgs/2023/02/w250/poco-x5-5g-den.jpg.webp",
+      masp: 93,
       class: "Tầm trung",
     },
     {
@@ -1686,6 +1779,7 @@ let listProducts = [
       },
       rate: 4.8,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/imgs/2022/09/w250/xiaomi-civi-2-xanh-bac.png.webp",
+      masp: 94,
       class: "Tầm trung",
     },
     {
@@ -1704,6 +1798,7 @@ let listProducts = [
       },
       rate: 4.5,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/imgs/2022/08/w250/oneplus-ace-pro-den.jpg.webp",
+      masp: 95,
       class: "Cận cao cấp",
     },
     {
@@ -1722,6 +1817,7 @@ let listProducts = [
       },
       rate: 4.8,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/imgs/2022/12/w300/nubia-red-magic-8-pro-plus-sac-165w-den-trong.jpg.webp",
+      masp: 96,
       class: "Cao cấp",
     },
     {
@@ -1740,6 +1836,7 @@ let listProducts = [
       },
       rate: 4.3,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/imgs/2023/03/w250/tecno-spark-go-2023-pin-5000mah-xanh.jpg.webp",
+      masp: 97,
       class: "Giá rẻ",
     },
     {
@@ -1758,6 +1855,7 @@ let listProducts = [
       },
       rate: 4.6,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/imgs/2023/03/w250/vivo-iqoo-z7i-xanh.jpg.webp",
+      masp: 98,
       class: "Giá rẻ",
     },
     {
@@ -1776,6 +1874,7 @@ let listProducts = [
       },
       rate: 4.7,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/imgs/2023/02/w250/realme-gt-neo-5-5g-trang.jpg.webp",
+      masp: 99,
       class: "Cận cao cấp",
     },
     {
@@ -1794,6 +1893,7 @@ let listProducts = [
       },
       rate: 4.5,
       img: "https://cdn.mobilecity.vn/mobilecity-vn/imgs/2022/12/w250/xiaomi-redmi-k60-den.jpg.webp",
+      masp: 100,
       class: "Cận cao cấp",
     },
   ];
