@@ -1,3 +1,4 @@
+//Tài khoản admin mặc định
 let adminInfo = [
   {
     username: "admin",
@@ -56,34 +57,30 @@ function searchByName(list, name, qty) {
   return result;
 }
 
-//Cart number (Thêm vào giỏ hàng)
-function animateCartNumber() {
-  let cn = document.querySelector("#cart-total");
-  cn.style.transform = "scale(2)";
-  cn.style.backgroundColor = "#ff6801";
-  cn.style.color = "white";
-  setTimeout(function () {
-    cn.style.transform = "scale(1)";
-    cn.style.backgroundColor = "#ff6801";
-    cn.style.color = "white";
-  }, 1000);
+//Tìm kiếm theo mã SP
+function searchByProductCode(list, code) {
+  for (let i of list) {
+    if (i.masp == code) return i;
+  }
 }
+//====================GIỎ HÀNG=======================
 
-function addToCart(masp, name){
-  let user  = getCurrentUser();
-  if (!user){
+//Hàm thêm sp vào giỏ hàng
+function addToCart(masp, name) {
+  let user = getCurrentUser();
+  if (!user) {
     alert("Bạn cần đăng nhập để mua hàng!");
     showAccount(true);
     return;
   }
 
-  if (user.off){
+  if (user.off) {
     alert("Tài khoản bị khóa, không thể mua hàng!");
     return;
   }
   let time = new Date();
   let productExist = false;
-  for (let i = 0; i<user.products.length; i++){
+  for (let i = 0; i < user.products.length; i++) {
     //Kiểm tra xem có trùng sản phẩm trong giỏ hay không
     if (user.products[i].ma == masp) {
       user.products[i].qty++;
@@ -98,5 +95,43 @@ function addToCart(masp, name){
       qty: 1,
       date: time,
     });
+  }
+  //Thông báo thêm vào giỏ hàng thành công
+  alert("Đã thêm sản phẩm vào giỏ!");
+  //Cập nhật thông tin giỏ hàng cho user hiện tại
+  setCurrentUser(user);
+  //Cập nhật danh sách user
+  updateListUser(user);
+  //Cập nhật giỏ hàng
+  updateInfoCurrentUser();
 }
+
+//============Các hàm về TÀI KHOẢN============
+
+// Hàm get set cho người dùng hiện tại đã đăng nhập (Local storage)
+function getCurrentUser() {
+  return JSON.parse(window.localStorage.getItem("CurrentUser")); // Lấy dữ liệu từ localstorage
+}
+
+function setCurrentUser(u) {
+  window.localStorage.setItem("CurrentUser", JSON.stringify(u));
+}
+
+//Hàm set/get cho danh sách người dùng
+function getListUser() {
+  let data = JSON.parse(window.localStorage.getItem("ListUser"));
+  let temp = [];
+  for (let d of data) {
+    temp.push(d);
+  }
+  return temp;
+}
+
+//Cập nhật danh sách user sau khi chỉnh sửa
+function updateListUser(user, newData){
+  let list = getListUser();
+  for (let i = 0; i< list.length; i++){
+
+  }
+  setListUser(list);
 }
