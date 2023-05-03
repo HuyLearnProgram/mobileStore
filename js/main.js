@@ -108,6 +108,7 @@ function addToCart(masp, name) {
 
 //============Các hàm về TÀI KHOẢN============
 
+
 // Hàm get set cho người dùng hiện tại đã đăng nhập (Local storage)
 function getCurrentUser() {
   return JSON.parse(window.localStorage.getItem("CurrentUser")); // Lấy dữ liệu từ localstorage
